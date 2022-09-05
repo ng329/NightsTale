@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
 
+    # creating markers for map:
     @markers = @events.geocoded.map do |event|
       {
         lat: event.latitude,
