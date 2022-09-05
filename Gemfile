@@ -80,3 +80,6 @@ end
 
 # geocoding
 gem "geocoder"
+
+# cloudinary:
+gem "cloudinary"
