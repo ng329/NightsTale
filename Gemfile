@@ -83,3 +83,6 @@ gem "geocoder"
 
 # cloudinary:
 gem "cloudinary"
+
+# search gem
+gem "pg_search"
