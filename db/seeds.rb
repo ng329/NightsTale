@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+require "open-uri"
+require 'json'
+require 'rest-client'
+
+User.destroy_all
+Event.destroy_all
+
+puts "creating users"
+User.new(
+  username:,
+  email:,
+  password: "password",
+  password_confirmation: "password"
+)
