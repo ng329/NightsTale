@@ -13,6 +13,10 @@
     <%= f.input :username,
                 required: false,
                 input_html: { autocomplete: "new-username" }%>
+    <%= f.input :photo,
+                as: :file,
+                required: false
+                %>
     <%= f.input :password,
                 hint: "leave it blank if you don't want to change it",
                 required: false,
