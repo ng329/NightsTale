@@ -1,9 +1,24 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    if params["tag"].present?
+      @events = Event.search_tags(params["tag"])
+    else
+      @events = Event.all
+    end
 
     # creating markers for map:
-    @markers = @events.geocoded.map do |event|
+    @markers = add_markers_to_map(@events)
+  end
+
+  def show
+    @event = Event.find(params[:id])
+    @booking = Booking.new
+  end
+
+  private
+
+  def add_markers_to_map(events)
+    markers = events.geocoded.map do |event|
       {
         lat: event.latitude,
         lng: event.longitude,
@@ -11,10 +26,6 @@ class EventsController < ApplicationController
           "info_window", locals: {event: event})
       }
     end
-  end
-
-  def show
-    @event = Event.find(params[:id])
-    @booking = Booking.new
+    return markers
   end
 end
