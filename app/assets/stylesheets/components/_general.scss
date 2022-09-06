@@ -1,6 +1,6 @@
 a {
   text-decoration: none;
-  font-family: "Cinzel";
+  font-family: "Cinzel Decorative";
   color: $soft-peach;
 }
 
@@ -11,4 +11,17 @@ p {
 
 body {
   background: #232323;
+  padding: 0px;
+  margin: 0px;
+
 }
+
+h1, h2 {
+  color: $soft-peach;
+}
+
+.container {
+  margin: 0px;
+  padding: 0px;
+}
+
