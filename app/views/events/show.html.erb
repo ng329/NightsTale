@@ -2,9 +2,10 @@
 
 <div class="container">
   <div class="image-card">
+    <i class="fa-regular fa-circle fa-2xl" data-controller="favourites" data-favourites-target="button" data-action="click->favourites#togglefavourite"></i>
     <div class="image-card-text">
-    <h1><strong>Event</strong></h1>
-    <p>Location</p>
+      <h1><strong><%= @event.name %></strong></h1>
+      <p><%= @event.location %></p>
     </div>
     <div class="image-event">
       <% @event.photos.each do |photo| %>
@@ -12,14 +13,16 @@
       <% end %>
     </div>
     <div class="text-information">
+
     </div>
   </div>
   <div class="lower-container">
     <div class="btn long mar10 box06403" type="button" href="">Book Now</div>
-    <div class="event-info box06403 mar10">
-    </div>
-    <h2>Reviews</h2>
-    <div class="event-review box06403 mar10">
-    </div>
+      <div class="event-info box06403 mar10">
+        <p><%= @event.description %></p>
+      </div>
+      <h2>Reviews</h2>
+      <div class="event-review box06403 mar10">
+      </div>
   </div>
 </div>
