@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   resources :events, only: %i[index show] do
     resources :bookings, only: %i[create]
+    resources :favourites, only: %i[create destroy]
   end
 end
