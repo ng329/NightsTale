@@ -11,7 +11,7 @@ class Event < ApplicationRecord
   validates :name, :location, :tags, :description, :url, :price_per_person, presence: true
   validates :tags, inclusion: { in: TAGS }
 
-  after_validation :geocode, if: :will_save_change_to_address?
+  after_validation :geocode, if: :will_save_change_to_location?
 
   pg_search_scope :search_tags,
                   against: %i[tags],
