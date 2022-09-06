@@ -1,0 +1,25 @@
+<%= render "shared/navbar" %>
+
+<div class="container">
+  <div class="image-card">
+    <div class="image-card-text">
+    <h1><strong>Event</strong></h1>
+    <p>Location</p>
+    </div>
+    <div class="image-event">
+      <% @event.photos.each do |photo| %>
+       <%= cl_image_tag photo.key, height: 390, width: 390, crop: :fill %>
+      <% end %>
+    </div>
+    <div class="text-information">
+    </div>
+  </div>
+  <div class="lower-container">
+    <div class="btn long mar10 box06403" type="button" href="">Book Now</div>
+    <div class="event-info box06403 mar10">
+    </div>
+    <h2>Reviews</h2>
+    <div class="event-review box06403 mar10">
+    </div>
+  </div>
+</div>
