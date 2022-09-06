@@ -13,14 +13,22 @@ export default class extends Controller {
     // creates new map
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/streets-v11"
+      style: "mapbox://styles/mapbox/dark-v10",
+      // center: [-79.4512, 43.6568],
+      // zoom: 13
     })
     // Add markers to map
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
     // add search function to map
-    this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
-      mapboxgl: mapboxgl }))
+    // this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+    //   mapboxgl: mapboxgl }))
+    const geocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
+      });
+
+    document.getElementById('search-bar').appendChild(geocoder.onAdd(this.map));
   }
 
   #addMarkersToMap() {

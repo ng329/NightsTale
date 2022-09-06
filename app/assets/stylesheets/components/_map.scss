@@ -6,3 +6,19 @@
   text-align: center;
   // font-family: "Open Sans", sans-serif;
 }
+
+.search-bar {
+  width: 100%;
+  padding: 0.2em;
+  display: flex;
+  justify-content: center;
+  background-color: $black;
+}
+
+// .mapboxgl-ctrl-geocoder {
+//   width: 75%;
+// }
+
+.filter-container {
+  width: 100%;
+}
