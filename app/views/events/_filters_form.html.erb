@@ -1,0 +1,11 @@
+<div class="filter" id="filter-form" data-filter-target="modal" style>
+  <div class="filter-buttons">
+    <%= link_to events_path(tags: "outdoor"), class:"btn",
+                                              data: {
+                                                filter_target: "filterbutton",
+                                                action: "click->filter#filtering"
+                                              }     do%>
+      <i class="fa-solid fa-bench-tree"></i>
+    <% end %>
+  </div>
+</div>

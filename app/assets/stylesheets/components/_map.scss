@@ -7,18 +7,30 @@
   // font-family: "Open Sans", sans-serif;
 }
 
-.search-bar {
+.top-bar {
   width: 100%;
   padding: 0.2em;
   display: flex;
   justify-content: center;
   background-color: $black;
+  flex-direction: column;
 }
 
 // .mapboxgl-ctrl-geocoder {
 //   width: 75%;
 // }
 
-.filter-container {
+.filter {
   width: 100%;
+  display: none;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
 }
