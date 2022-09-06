@@ -1,49 +1,12 @@
 <%# not visible but has search bar inserted into this div %>
-<div id="search-bar" class="search-bar">
-  <%# drop down menu for filters %>
-  <div class="dropdown">
-    <%# btn for filter menu %>
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    button
-    </button>
-
-    <%# filter menu %>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <%# <div class="filter-container"> %>
-
-        <%# distance slider div %>
-        <div class="distance-selector">
-        </div>
-
-        <%# filter buttons  %>
-        <div class="filter-buttons">
-          <%= link_to events_path(tag: "Food & Drink"), class:'btn' do %>
-            <%= icon('fa-solid', 'check')%>
-          <% end %>
-          <%= link_to events_path(tag: "Adventure"), class:'btn' do %>
-            <%= icon('fa-solid', 'check')%>
-          <% end %>
-          <%= link_to events_path(tag: "Escape Room"), class:'btn' do %>
-            <%= icon('fa-solid', 'check')%>
-          <% end %>
-          <%= link_to events_path(tag: "Outdoor"), class:'btn' do %>
-            <%= icon('fa-solid', 'check')%>
-          <% end %>
-          <%= link_to events_path(tag: "Theatre"), class:'btn' do %>
-            <%= icon('fa-solid', 'check')%>
-          <% end %>
-          <%= link_to events_path(tag: "Gaming"), class:'btn' do %>
-            <%= icon('fa-solid', 'check')%>
-          <% end %>
-          <%= link_to events_path(tag: "Cinema"), class:'btn' do %>
-            <%= icon('fa-solid', 'check')%>
-          <% end %>
-        </div>
-      <%# </div> %>
-
-    </div>
+<div class="top-bar" data-controller="filter">
+  <div id="search-bar" class="search-bar" >
+    <button data-action="click->filter#appear"
+            data-filter-target="button">filters</button>
   </div>
+    <%= render "events/filters_form" %>
 </div>
+
 <%# map div %>
 <div style="width: 100%; height: 600px;"
   data-controller="map"
