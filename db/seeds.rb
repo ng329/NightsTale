@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-require 'faker'
+# require 'faker'
 require "open-uri"
 require 'json'
 require 'rest-client'
@@ -64,7 +64,7 @@ event1 = Event.new(
   price_per_person: 34.00
 )
 file = URI.open("https://parkrowlondon.co.uk/wp-content/uploads/2021/08/gotham_interior_2-1024x683.jpg")
-event1.photo.attach(io: file, filename: "park-row.jpg", content_type: "image/jpeg")
+event1.photos.attach(io: file, filename: "park-row.jpg", content_type: "image/jpeg")
 event1.save
 
 event2 = Event.new(
@@ -76,7 +76,7 @@ event2 = Event.new(
   price_per_person: 35.00
 )
 file = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/3f/3d/a4/tomb-raider-the-live.jpg?w=1200&h=-1&s=1")
-event2.photo.attach(io: file, filename: "tomb-raider.jpg", content_type: "image/jpeg")
+event2.photos.attach(io: file, filename: "tomb-raider.jpg", content_type: "image/jpeg")
 event2.save
 
 event3 = Event.new(
@@ -88,7 +88,7 @@ event3 = Event.new(
   price_per_person: 35.00
 )
 file = URI.open("https://static.designmynight.com/uploads/2021/04/KMWUyxw1-optimised.png")
-event3.photo.attach(io: file, filename: "sherlock-game.jpg", content_type: "image/jpeg")
+event3.photos.attach(io: file, filename: "sherlock-game.jpg", content_type: "image/jpeg")
 event3.save
 
 puts "finished"
