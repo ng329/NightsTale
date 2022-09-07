@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="lower-container">
-    <div class="btn long mar10 box06403 size15" type="button" href="">Book Now</div>
+    <%= render "bookings/button_new", event: @event  %>
     <div class="event-info mar10 pad10 box06403">
      <h2 class="information">Information</h2>
      <p><%= @event.url %></p>
