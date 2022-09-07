@@ -16,13 +16,13 @@
   // box-sizing: border-box;
   // align-items: stretch;
   // border-radius: 15px 15px 0px 0px;
-  width: 430px;
+  width: 390px;
   height: 60px;
   background-color: $black;
-  border-radius: 30px 30px 0 0;
+  border-radius: 30px 30px 0px 0px;
   position: absolute;  
   left: 50%;
-  bottom: 50%;
+  bottom: 0%;
   transform: translate(-50%,50%);
 }
 
@@ -33,41 +33,41 @@
 //   color: $purple;
 // }
 
-// ul li:nth-child(1){
-//   position: absolute;
-//   left: 20%;
-//   bottom: 50%;
-//   transform: translate(-50%,50%);
-//   padding: 15px;
-//   transition: all .5s;
-// }
+.icon:nth-child(1){
+  position: absolute;
+  left: 20%;
+  bottom: 50%;
+  transform: translate(-50%,50%);
+  padding: 15px;
+  transition: all .5s;
+}
 
-// ul li:nth-child(2){
-//   position: absolute;
-//   left: 50%;
-//   bottom: 50%;
-//   transform: translate(-50%,50%);
-//   padding: 15px;
-//   transition: all .5s;
-// }
+.icon:nth-child(2){
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%,50%);
+  padding: 15px;
+  transition: all .5s;
+}
 
-// ul li:nth-child(3){
-//   position: absolute;
-//   left: 80%;
-//   bottom: 50%;
-//   transform: translate(-50%,50%);
-//   padding: 15px;
-//   transition: all .5s;
-// }
+.icon:nth-child(3){
+  position: absolute;
+  left: 80%;
+  bottom: 50%;
+  transform: translate(-50%,50%);
+  padding: 15px;
+  transition: all .5s;
+}
 
-// ul li:hover{
-//   position: absolute;
-//   bottom: 105%;
-//   transform: translate(-50%,50%);
-//   background-color: $soft-peach;
-//   border-radius: 50%;
-//   border: 5px solid $purple;
-// }
+.icon:hover{
+  position: absolute;
+  bottom: 105%;
+  transform: translate(-50%,50%);
+  background-color: $soft-peach;
+  border-radius: 50%;
+  border: 5px solid $purple;
+}
 
 // Icons
 
