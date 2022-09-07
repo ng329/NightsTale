@@ -86,3 +86,6 @@ gem "cloudinary"
 
 # search gem
 gem "pg_search"
+
+# calender bookings
+gem "simple_calendar", "~> 2.4"
