@@ -9,12 +9,17 @@ p {
   color: $soft-peach;
 }
 
-body {
-  background: #232323;
-  // background: pink;
+* {
+  list-style: none;
   padding: 0px;
   margin: 0px;
 
+}
+
+body {
+  background: #232323;
+  // background: pink;
+  width: 100vw;
 }
 
 h1, h2 {
@@ -28,4 +33,10 @@ h1, h2 {
 
 .information {
   color: $grey;
+}
+
+// profile
+
+.profile {
+  background-color: $deep-purple;
 }
