@@ -1,0 +1,24 @@
+.simple-calendar {
+  table {
+    color: white;
+  }
+  .today {
+    background-color: $grey
+  }
+
+  .day {
+    height: 3.5em;
+    color: white;
+  }
+}
+
+td {
+  color: white;
+}
+
+.booking {
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $violet ;
+  transition: background 0.3s ease;
+}
