@@ -10,7 +10,7 @@ export default class extends Controller {
   }
 
   toggleFavourite(event) {
-    console.log(this.pathValue)
+    // console.log(this.pathValue)
 
     if (this.buttonTarget.classList.contains('added')){
       this.buttonTarget.classList.remove("added")

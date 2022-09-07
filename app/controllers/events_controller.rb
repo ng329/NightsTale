@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   def index
-    if params["tag"].present?
+    # raise
+    if params["tags"].present?
+      # raise
       @events = Event.search_tags(params["tag"])
     else
       @events = Event.all
