@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import FavouritesController from "./favourites_controller"
+application.register("favourites", FavouritesController)
+
 import FilterController from "./filter_controller"
 application.register("filter", FilterController)
 

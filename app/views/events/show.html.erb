@@ -2,6 +2,7 @@
 
 <div class="container">
   <div class="image-card">
+    <i class="fa-regular fa-circle fa-2xl" data-controller="favourites" data-favourites-target="button" data-action="click->favourites#togglefavourite"></i>
     <div class="image-card-text">
     <h1><strong><%= @event.name %></strong></h1>
     <p><%= @event.location %></p>
@@ -12,6 +13,7 @@
       <% end %>
     </div>
     <div class="text-information">
+
     </div>
   </div>
   <div class="lower-container">
