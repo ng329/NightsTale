@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :time, :number_of_people)
+    params.require(:booking).permit(:date, :number_of_people)
   end
 
   def calculate_price(price, people)
