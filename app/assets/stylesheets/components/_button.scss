@@ -10,3 +10,11 @@
   text-decoration: none;
 }
 
+.btn:hover {
+  background: $violet;
+  border: 1px solid $black;
+  box-shadow: 0px 6px 4px rgba(0 ,0 , 0, 0.3);
+  border-radius: 30px;
+  color: $soft-peach;
+  text-decoration: none;
+}
