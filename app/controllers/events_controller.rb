@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   def index
-    if params["tag"].present?
+    # raise
+    if params["tags"].present?
+      # raise
       @events = Event.search_tags(params["tag"])
     else
       @events = Event.all
@@ -13,6 +15,11 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @booking = Booking.new
+    if current_user.favourites.empty?
+      @favourite = nil
+    else
+      current_user.favourites.each { |favourite| @favourite = favourite if favourite.event_id == @event.id }
+    end
   end
 
   private

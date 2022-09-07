@@ -2,7 +2,14 @@
 
 <div class="container">
   <div class="image-card">
-    <i class="fa-regular fa-circle fa-2xl" data-controller="favourites" data-favourites-target="button" data-action="click->favourites#togglefavourite"></i>
+    <%= link_to  add_to_favourites_event_favourite_path(@event) do%>
+      <% if @favourite.nil? %>
+        <i class="fa-regular fa-circle fa-2xl"></i>
+        <%# data-controller="favourites" data-favourites-target="button" data-action="click->favourites#toggleFavourite" data-favourites-path-value="" %>
+      <% else %>
+         <i class="fa-solid fa-circle fa-2xl"></i>
+      <% end %>
+    <% end %>
     <div class="image-card-text">
     <h1><strong><%= @event.name %></strong></h1>
     <p><%= @event.location %></p>

@@ -9,8 +9,9 @@ export default class extends Controller {
     console.log("connected")
   }
 
-  togglefavourite(event) {
-    console.log(event)
+  toggleFavourite(event) {
+    // console.log(this.pathValue)
+
     if (this.buttonTarget.classList.contains('added')){
       this.buttonTarget.classList.remove("added")
       this.buttonTarget.classList.remove("fa-solid")
