@@ -1,11 +1,18 @@
 <%# currently a card - need to be made into calender view %>
 <%# whole container %>
-<div class="bookings">
+<div class="bookings" data-controller="calendar" >
   <%= month_calendar(events: @bookings) do |date, bookings| %>
     <%= date %>
       <% bookings.each do |booking| %>
-        <div class="booking">
+        <div class="booking" data-calendar-target="booking" data-action="click->calendar#appear">
         </div>
       <% end %>
   <% end %>
+</div>
+
+
+
+<%# modal toggle view events %>
+<div class="bookings-info-box" data-calendar-target="modal">
+
 </div>
