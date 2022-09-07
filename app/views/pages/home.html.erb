@@ -1,14 +1,23 @@
-<div class="container">
+<div class="container" data-controller="swiper">
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><h1>Discover your next night out.</h1></div>
-      <div class="swiper-slide"><h1>Search hundreds of events around you.</h1></div>
-      <div class="swiper-slide"><h1>NightsTale</h1></div>
+      <div class="swiper-slide">
+        <h1>Discover your next night out.</h1>
+        <%= image_tag "sky1.png" %>
+      </div>
+      <div class="swiper-slide">
+        <h1>Search hundreds of events around you.</h1>
+        <%= image_tag "sky2.png" %>
+      </div>
+      <div class="swiper-slide">
+        <h1>NightsTale</h1>
+        <%= image_tag "sky3.png" %>
+      </div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
   <div class="home-btns">
-    <a class="btn box06403 short size2" href="">Sign In</a>
-    <a class="btn box06403 short size2" href="">Sign Up</a>
+    <a class="btn box06403 short size2" href="/users/sign_in">Sign In</a>
+    <a class="btn box06403 short size2" href="/users/sign_up">Sign Up</a>
   </div>
 </div>

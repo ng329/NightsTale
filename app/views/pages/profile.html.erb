@@ -1,11 +1,13 @@
 <div class="container">
+<%= render "shared/navbar" %>
+
 
   <%# top page profile section %>
-  <div class="profile">
-    <%= cl_image_tag @user.photo.key, class: "avatar", height: 300, width: 400, crop: :fill %>
+  <div class="profile ">
+    <%= cl_image_tag @user.photo.key, class: "avatar box06403 mar10", height: 300, width: 400, crop: :fill %>
     <%# profile information: ie name %>
     <div class="profile-info">
-      <h6><%= @user.username %></h6>
+      <h2><%= @user.username %></h2>
     </div>
   </div>
 
