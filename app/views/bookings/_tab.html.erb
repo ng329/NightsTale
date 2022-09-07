@@ -1,12 +1,11 @@
 <%# currently a card - need to be made into calender view %>
-
 <%# whole container %>
 <div class="bookings">
-  <%# filtering through booked events %>
-  <%= @bookings.each do |booking| %>
-      <%# card for each booking %>
-      <div class="booking-card">
-        <p><%= booking.event.name %></p>
-      </div>
+  <%= month_calendar(events: @bookings) do |date, bookings| %>
+    <%= date %>
+      <% bookings.each do |booking| %>
+        <div class="booking">
+        </div>
+      <% end %>
   <% end %>
 </div>
