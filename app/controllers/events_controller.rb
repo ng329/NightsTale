@@ -13,6 +13,11 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @booking = Booking.new
+    if current_user.favourites.empty?
+      @favourite = nil
+    else
+      current_user.favourites.each { |favourite| @favourite = favourite if favourite.event_id == @event.id }
+    end
   end
 
   private
