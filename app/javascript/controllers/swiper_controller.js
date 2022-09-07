@@ -10,7 +10,8 @@ export default class extends Controller {
   connect() {
     const swiper = new Swiper('.swiper', {
       speed: 400,
-      spaceBetween: 100,
+      spaceBetween: 0,
+      // effect: 'fade',
 
       pagination: {
         el: '.swiper-pagination',
