@@ -1,8 +1,11 @@
 <%# not visible but has search bar inserted into this div %>
 <div class="top-bar" data-controller="filter">
   <div id="search-bar" class="search-bar" >
-    <button data-action="click->filter#appear"
-            data-filter-target="button">filters</button>
+    <div class="filter-icon-box">
+      <i class="fa-solid fa-filter fa-xl" data-action="click->filter#appear"
+              data-filter-target="button"></i>
+      <%# <button >filters</button> %>
+    </div>
   </div>
     <%= render "events/filters_form" %>
 </div>
