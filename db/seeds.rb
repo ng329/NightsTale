@@ -91,4 +91,99 @@ file = URI.open("https://static.designmynight.com/uploads/2021/04/KMWUyxw1-optim
 event3.photos.attach(io: file, filename: "sherlock-game.jpg", content_type: "image/jpeg")
 event3.save
 
+event4 = Event.new(
+  name: "Moriarty's Game",
+  location: "The Marylebone Pub, 93 Marylebone High St, London W1U 4RE",
+  description: "Professor James Moriarty invites you to celebrate the finest minds in London by solving his mysterious challenge, which he has personally prepared. Succeed, and he promises to make you an offer you can’t refuse...",
+  tags: "Outdoor",
+  url: "https://www.inthehiddencity.com/london/moriartys-game-the-professors-invitation",
+  price_per_person: 25.00
+)
+file = URI.open("https://www.google.com/maps/place/Moriarty's+Game:+The+Professor's+Invitation+by+HiddenCity/@51.5198397,-0.1520172,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMV-AzaquhlpwKMW63U4qOWRg2lun92qHFhTVzZ!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMV-AzaquhlpwKMW63U4qOWRg2lun92qHFhTVzZ%3Dw138-h86-k-no!7i1890!8i1172!4m5!3m4!1s0x0:0x9a32bdaf1cd86616!8m2!3d51.5198896!4d-0.152025#")
+event4.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event4.save
+
+event5 = Event.new(
+  name: "The Hunt for the Cheshire Cat",
+  location: "91 Strand, London WC2R 0DW",
+  description: "The Cheshire Cat is in London, and he wants you to find him. Solve his clues on an adventure into the strange, surreal and absurd - and uncover a dark conspiracy at the heart of Wonderland…",
+  tags: "Outdoor",
+  url: "https://www.inthehiddencity.com/london/the-hunt-for-the-cheshire-cat",
+  price_per_person: 25.00
+)
+file = URI.open("https://www.google.com/maps/place/The+Hunt+for+the+Cheshire+Cat+by+HiddenCity/@51.5102228,-0.1212197,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPiQEHDTUuT69VviwqIJZaAoPkjVyyI9WvOL08a!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPiQEHDTUuT69VviwqIJZaAoPkjVyyI9WvOL08a%3Dw114-h86-k-no!7i4032!8i3024!4m5!3m4!1s0x0:0x69c1aebe4dbd4de4!8m2!3d51.5103721!4d-0.1211373#")
+event5.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event5.save
+
+event6 = Event.new(
+  name: "The Enchanted Mirror",
+  location: "South Kensington Station Arcade, South Kensington, London",
+  description: "Mirror, mirror on the wall… Embark on a fairytale quest to find the Enchanted Mirror and prove yourself the wisest of them all. But beware the tricks of a deceitful Queen, and the fate of those who fail...",
+  tags: "Outdoor",
+  url: "https://www.inthehiddencity.com/london/the-hunt-for-the-cheshire-cat",
+  price_per_person: 25.00
+)
+file = URI.open("https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/12/12/1386830497013/SKen.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=4d9ee3c3772c731ce391c9130b0106e7")
+event6.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event6.save
+
+event6 = Event.new(
+  name: "Backyard Cinema",
+  location: "2 Armoury Way, London, SW18 1SH",
+  description: "The UK's most magical cinema is back, and this time, we're taking you on an Arctic voyage to the top of the world. Follow constellations of twinkling stars that will guide you to the Northern Lights and your giant beanbag, surrounded by snow topped trees to enjoy your favourite movies.",
+  tags: "Cinema",
+  url: "https://backyardcinema.co.uk/london/?filter=2022-10",
+  price_per_person: 20.00
+)
+file = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/c7/1c/17/getlstd-property-photo.jpg?w=1200&h=-1&s=1")
+event6.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event6.save
+
+event7 = Event.new(
+  name: "Monopoly Lifesized",
+  location: "213 Tottenham Court Road, W1T 7PS",
+  description: "Located in the heart of London, Monopoly Lifesized is an immersive, on-your-feet version of the world's favourite family game brand played on a 15m x 15m lifesized Monopoly board! Compete in one of a kind challenges for your chance to buy properties. Experience the thrill of trying to stage a heist in Mayfair, competing against a clock to build some of London’s iconic buildings, solving a baffling murder mystery or stepping into the world of codebreakers.",
+  tags: "Gaming",
+  url: "https://www.monopolylifesized.com/",
+  price_per_person: 49.00
+)
+file = URI.open("https://jupiterhadley.com/wp-content/uploads/2021/09/IMG_8876.jpg")
+event7.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event7.save
+
+event8 = Event.new(
+  name: "Jeff Wayne's The War of the Worlds",
+  location: "56 Leadenhall Street, London, EC3A 2BJ",
+  description: "Make lasting memories with friends and family as you journey through 24 interactive scenes where 12 live actors, state-of-the-art virtual reality and sensational 5D effects create a breath-taking experience - all with Jeff Wayne's multi-award double album of The War of the Worlds as your soundtrack. Come face to face with a 300 foot Martian Fighting Machines, sneak into a deserted Victorian house, sail out to sea and witness the battle between the Martians and HMS Thunder Child, and fly to Mars in a hot air balloon.  Experience a world beyond your own, and get ready to discover your greatest adventure yet.",
+  tags: "Theatre",
+  url: "https://www.thewaroftheworlds.com/",
+  price_per_person: 40.00
+)
+file = URI.open("https://www.thewaroftheworlds.com/site/assets/files/3646/278485500_10158738298044290_6864718081938819132_n.510x510.jpeg")
+event8.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event8.save
+
+event9 = Event.new(
+  name: "The Murder Express Part Deux",
+  location: "Pedley Street Station, Arch 63, Pedley Street, London, E1",
+  description: "The year is 1937, the height of the British Empire, and Britain's most famous archeologist, Dr. Errol Earhart, has unearthed the world's most valuable diamond, the Jewel of the Empire, which is being transported to the Von Cleethorpes estate via Pedley Street station's, Murdér Express. Along for the journey are a host of new characters, including the dashing Errol Earhart and the mysterious Miss Marie as well as some familiar faces. It's not long before the diamond is missing, bodies are beginning to pile up and the clock is ticking to catch a killer and recover the Jewel of the Empire. ",
+  tags: "Food & Drink / Theatre",
+  url: "https://www.funicularproductions.com/",
+  price_per_person: 65.00
+)
+file = URI.open("https://static.designmynight.com/uploads/2019/05/Inspector2-optimised.png")
+event9.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event9.save
+
+event10 = Event.new(
+  name: "Supercharged VR",
+  location: "148 Tilbury Road, Leyton, London, E10 6RE",
+  description: "Race with up to parties of 6 people. Get ready for intense (and hopefully fair) wheel to wheel battles as you try and assert your dominance on track using your race-craft! Only one person will be crowned champion!",
+  tags: "Gaming",
+  url: "https://www.supercharged-vr.co.uk/",
+  price_per_person: 20.00
+)
+file = URI.open("https://static.designmynight.com/uploads/2022/05/New-profile1-optimised.jpg")
+event10.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event10.save
 puts "finished"
