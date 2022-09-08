@@ -27,6 +27,18 @@
 .search-bar {
   display: flex;
   flex-direction: row;
+  margin: 0.2em;
+}
+
+.filter-icon-box {
+  margin-left: 0.1em;
+  margin-right: 0.4em;
+  display: flex;
+  align-items: center;
+}
+
+.fa-filter {
+  color: $grey;
 }
 
 //  --------------------
