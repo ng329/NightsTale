@@ -7,9 +7,6 @@ import { application } from "./application"
 import CalendarController from "./calendar_controller"
 application.register("calendar", CalendarController)
 
-import FavouritesController from "./favourites_controller"
-application.register("favourites", FavouritesController)
-
 import FilterController from "./filter_controller"
 application.register("filter", FilterController)
 
