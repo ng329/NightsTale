@@ -3,7 +3,7 @@
   <%# filtering through favourited events %>
   <%= @favourites.each do |favourite| %>
     <%# link whole card to each event page %>
-    <%= link_to event_page(favourite.event) do %>
+    <%= link_to event_path(favourite.event) do %>
       <%# card for one event %>
       <div class="favourites-card">
         <%# event image %>
