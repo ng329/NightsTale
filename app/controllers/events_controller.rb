@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   def index
+    # raise
     if params["tags"].present?
       # raise
       tags = "#{params['tags']['food']} #{params['tags']['escape']} #{params['tags']['adventure']} #{params['tags']['outdoor']} #{params['tags']['theatre']} #{params['tags']['cinema']} #{params['tags']['gaming']}"

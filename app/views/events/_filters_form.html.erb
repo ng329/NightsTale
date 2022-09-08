@@ -1,13 +1,13 @@
 <div class="filter" id="filter-form" data-filter-target="modal" style>
   <div class="filter-buttons">
     <%= simple_form_for :tags, url: events_path, method: :get do |f| %>
-      <%= f.radio_button :food, "Food & Drink"  %>
-      <%= f.radio_button :escape, "Escape Room"  %>
-      <%= f.radio_button :adventure, "Adventure"  %>
-      <%= f.radio_button :outdoor, "Outdoor"  %>
-      <%= f.radio_button :theatre, "Theatre"  %>
-      <%= f.radio_button :cinema, "Cinema"  %>
-      <%= f.radio_button :gaming, "Gaming"  %>
+      <%= f.check_box :food, {}, "Food & Drink", ""  %>
+      <%= f.check_box :escape, {}, "Escape Room", ""  %>
+      <%= f.check_box :adventure, {}, "Adventure", ""  %>
+      <%= f.check_box :outdoor, {}, "Outdoor", ""  %>
+      <%= f.check_box :theatre, {}, "Theatre", ""  %>
+      <%= f.check_box :cinema, {}, "Cinema", ""  %>
+      <%= f.check_box :gaming, {}, "Gaming", ""  %>
       <%= f.button :submit, "filter" %>
     <% end %>
      <%# <i class="fa-solid fa-bench-tree"></i> %>
