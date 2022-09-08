@@ -1,36 +1,39 @@
 <div class="container">
-<%= render "shared/navbar" %>
+  <div class="container">
 
-
-  <%# top page profile section %>
-  <div class="profile ">
-    <%= cl_image_tag @user.photo.key, class: "avatar box06403 mar10", height: 300, width: 400, crop: :fill %>
-    <%# profile information: ie name %>
-    <div class="profile-info">
-      <h2><%= @user.username %></h2>
-    </div>
-  </div>
-
-  <%# tabs for favourites and bookings section %>
-  <div class="tabs">
-      <div class="tab-pane fade show active" id="tabs" role="tabpanel" aria-labelledby="my-tab">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="favourites-tab" data-bs-toggle="tab" data-bs-target="#favourites" type="button" role="tab" aria-controls="favourites" aria-selected="true"><h2>Favourites</h2></button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#bookings" type="button" role="tab" aria-controls="bookings" aria-selected="false"><h2>Accepted</h2></button>
-          </li>
-        </ul>
-      </div>
-    <div class="tab-content clearfix" id="myTabContent">
-      <div class="tab-pane fade " id="favourites" role="tabpanel" aria-labelledby="favourites-tab">
-        <%= render "favourites/tab" %>
-      </div>
-      <div class="tab-pane fade show active" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
-        <%= render "bookings/tab" %>
+    <%# top page profile section %>
+    <div class="profile ">
+      <%= cl_image_tag @user.photo.key, class: "avatar box06403 mar10", height: 300, width: 400, crop: :fill %>
+      <%# profile information: ie name %>
+      <div class="profile-info">
+        <h2><%= @user.username %></h2>
       </div>
     </div>
+
+    <%# tabs for favourites and bookings section %>
+    <div class="tabs">
+        <div class="tab-pane fade show active" id="tabs" role="tabpanel" aria-labelledby="my-tab">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="favourites-tab" data-bs-toggle="tab" data-bs-target="#favourites" type="button" role="tab" aria-controls="favourites" aria-selected="true"><h2>Favourites</h2></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#bookings" type="button" role="tab" aria-controls="bookings" aria-selected="false"><h2>Accepted</h2></button>
+            </li>
+          </ul>
+        </div>
+      <div class="tab-content clearfix" id="myTabContent">
+        <div class="tab-pane fade " id="favourites" role="tabpanel" aria-labelledby="favourites-tab">
+          <%= render "favourites/tab" %>
+        </div>
+        <div class="tab-pane fade show active" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
+          <%= render "bookings/tab" %>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+  <%= render "shared/navbar" %>
 
 </div>
