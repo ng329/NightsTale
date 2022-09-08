@@ -1,15 +1,58 @@
 <div class="filter" id="filter-form" data-filter-target="modal" style>
   <div class="filter-buttons">
     <%= simple_form_for :tags, url: events_path, method: :get do |f| %>
-      <%= f.check_box :food, {}, "Food & Drink", ""  %>
-      <%= f.check_box :escape, {}, "Escape Room", ""  %>
-      <%= f.check_box :adventure, {}, "Adventure", ""  %>
-      <%= f.check_box :outdoor, {}, "Outdoor", ""  %>
-      <%= f.check_box :theatre, {}, "Theatre", ""  %>
-      <%= f.check_box :cinema, {}, "Cinema", ""  %>
-      <%= f.check_box :gaming, {}, "Gaming", ""  %>
-      <%= f.button :submit, "filter" %>
+      <div class="tag-item">
+        <%= f.check_box :food, {
+                                class: "tag-selector"
+                              },
+                                "Food & Drink", "" %>
+        <%= f.label :food, "Food & Drink" , required: false %>
+      </div>
+      <div class="tag-item">
+        <%= f.check_box :escape, {
+                                  class: "tag-selector"
+                                },
+                                  "Escape Room", ""  %>
+        <%= f.label :escape, "Escape Room" , required: false %>
+      </div>
+      <div class="tag-item">
+        <%= f.check_box :adventure, {
+                                    class: "tag-selector"
+                                  },
+                                "Adventure", ""  %>
+        <%= f.label :adventure, "Adventure" , required: false %>
+      </div>
+      <div class="tag-item">
+        <%= f.check_box :outdoor, {
+                                  class: "tag-selector"
+                                },
+                                "Outdoor", ""  %>
+        <%= f.label :outdoor, "Outdoor" , required: false %>
+      </div>
+        <div class="tag-item">
+        <%= f.check_box :theatre, {
+                                  class: "tag-selector"
+                                },
+                                "Theatre", ""  %>
+        <%= f.label :theatre, "Theatre" , required: false %>
+      </div>
+      <div class="tag-item">
+        <%= f.check_box :cinema, {
+                                  class: "tag-selector"
+                                },
+                                "Cinema", ""  %>
+        <%= f.label :cinema, "Cinema" , required: false %>
+      </div>
+      <div class="tag-item">
+        <%= f.check_box :gaming, {
+                                  class: "tag-selector"
+                                },
+                                "Gaming", ""  %>
+        <%= f.label :gaming, "Gaming" , required: false %>
+      </div>
+      <div class="">
+        <%= f.button :submit, "filter", class: "filter-btn" %>
+      </div>
     <% end %>
-     <%# <i class="fa-solid fa-bench-tree"></i> %>
   </div>
 </div>
