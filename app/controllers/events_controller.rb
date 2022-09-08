@@ -23,6 +23,16 @@ class EventsController < ApplicationController
     end
   end
 
+  def popular
+    count = Favourite.group(:event_id).count
+    count = count.sort_by { |_k, v| v }
+    top = count.first(10)
+    ids = []
+    top.each { |pair| ids << pair[0] }
+    @events = []
+    ids.each { |id| @events << Event.find(id) }
+  end
+
   private
 
   def add_markers_to_map(events)

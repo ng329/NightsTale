@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "profile", to: "pages#profile"
 
+  get "popular", to: "events#popular"
+
   resources :events, only: %i[index show] do
     resources :bookings, only: %i[create]
     resources :favourites, only: [] do

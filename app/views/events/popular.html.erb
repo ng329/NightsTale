@@ -1,0 +1,29 @@
+<div class="popular-container">
+  <div class="titlebox">
+    <h3>Most Popular Events</h3>
+  </div>
+  <%# whole container %>
+  <div class="favourites mar07">
+    <%# filtering through top 10 popular events %>
+    <% @events.each do |event| %>
+      <%# link whole card to each event page %>
+      <%= link_to event_path(event) do %>
+        <%# card for one event %>
+        <div class="favourites-card mar10">
+          <%# event image %>
+          <% event.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 390, width: 390, crop: :fill %>
+          <% end %>
+          <%# event text %>
+          <p><%= event.name %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>
+
+
+
+
+<%= render "shared/navbar" %>
