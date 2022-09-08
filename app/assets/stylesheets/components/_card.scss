@@ -86,3 +86,15 @@
 .favourites {
   margin: .7em;
 }
+
+// Booking
+
+.bookings-info-box {
+  box-sizing: border-box;
+  position: relative;
+  width: 350px;
+  background: $purple;
+  border: solid 1px $black;
+  margin: auto;
+  padding: .7rem;
+}
