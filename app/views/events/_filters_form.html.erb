@@ -1,11 +1,15 @@
 <div class="filter" id="filter-form" data-filter-target="modal" style>
   <div class="filter-buttons">
-    <%= form_for :tags, url: events_path, method: :get do |f| %>
-      <%= f.collection_radio_buttons :tags, Event::TAGS, :id, :name %>
-      <%= f.radio_button :tags, collection: Event::TAGS %>
-      <%= f.button :submit %>
+    <%= simple_form_for :tags, url: events_path, method: :get do |f| %>
+      <%= f.radio_button :food, "Food & Drink"  %>
+      <%= f.radio_button :escape, "Escape Room"  %>
+      <%= f.radio_button :adventure, "Adventure"  %>
+      <%= f.radio_button :outdoor, "Outdoor"  %>
+      <%= f.radio_button :theatre, "Theatre"  %>
+      <%= f.radio_button :cinema, "Cinema"  %>
+      <%= f.radio_button :gaming, "Gaming"  %>
+      <%= f.button :submit, "filter" %>
     <% end %>
-
-    <%# <i class="fa-solid fa-bench-tree"></i> %>
+     <%# <i class="fa-solid fa-bench-tree"></i> %>
   </div>
 </div>
