@@ -1,11 +1,11 @@
 <%# whole container %>
-<div class="favourites">
+<div class="favourites mar07">
   <%# filtering through favourited events %>
   <% @favourites.each do |favourite| %>
     <%# link whole card to each event page %>
     <%= link_to event_path(favourite.event) do %>
       <%# card for one event %>
-      <div class="favourites-card mar07">
+      <div class="favourites-card mar10">
         <%# event image %>
         <% favourite.event.photos.each do |photo| %>
           <%= cl_image_tag photo.key, height: 390, width: 390, crop: :fill %>
