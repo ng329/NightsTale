@@ -60,7 +60,25 @@
 
 
 // Favourites card
+
+
+.favourites-card {
+  position: relative;
+  display: inline-grid;
+
+}
+
 .favourites-card img {
   width: 10em;
   height: 10em;
+  border-radius: 30px;
+
 }
+
+.favourites-card p {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 15ch;
+}
+

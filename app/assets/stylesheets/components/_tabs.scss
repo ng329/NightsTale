@@ -1,7 +1,11 @@
-.tabs {
-  background-color: $deep-purple;
-}
+// .tabs {
+//   background-color: pink;
+// }
 
 .nav-tabs .nav-link.active {
   background: none;
+}
+
+.nav-tabs {
+  background: $deep-purple;
 }
