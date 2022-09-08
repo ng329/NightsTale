@@ -3,8 +3,7 @@
     <%= link_to  add_to_favourites_event_favourite_path(@event) do%>
       <% if @favourite.nil? %>
         <i class="fa-regular fa-circle fa-2xl"></i>
-        <%# data-controller="favourites" data-favourites-target="button" data-action="click->favourites#toggleFavourite" data-favourites-path-value="" %>
-      <% else %>
+        <% else %>
          <i class="fa-solid fa-circle fa-2xl"></i>
       <% end %>
     <% end %>

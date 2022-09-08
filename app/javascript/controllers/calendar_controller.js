@@ -4,14 +4,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["booking", "modal"]
 
-  // static values = {
-  //   eventId: Number,
-  //   title: String,
-  //   location: String,
-  //   date: String,
-  //   price: Number,
-  //   people: Number
-  // }
   connect() {
     console.log("connect")
     console.log("4")
@@ -19,7 +11,6 @@ export default class extends Controller {
 
   appear() {
     // console.log(this.bookingTarget.dataset.eventid)
-
     if (this.modalTarget.style.display === "none") {
       this.modalTarget.style.display = "block";
       const bookingInfo = `<div class="container">
