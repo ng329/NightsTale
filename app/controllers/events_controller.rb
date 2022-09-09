@@ -41,8 +41,8 @@ class EventsController < ApplicationController
         lat: event.latitude,
         lng: event.longitude,
         info_window: render_to_string(partial:
-          "info_window", locals: {event: event}),
-        image_url: helpers.asset_url("map.png")
+          "info_window", locals: { event: event }),
+        image_url: helpers.asset_url("pin.png")
       }
     end
     return markers
