@@ -5,8 +5,7 @@ export default class extends Controller {
   static targets = ["booking", "modal"]
 
   connect() {
-    console.log("connect")
-    console.log("4")
+    // console.log("connect")
   }
 
   appear() {

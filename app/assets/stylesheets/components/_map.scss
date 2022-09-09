@@ -23,8 +23,8 @@
   background: rgba($color: $violet, $alpha: 1.0)  !important;
 }
 
-.marker {
-  background-image: url('pin.png');
+.mapboxgl-marker {
+  // background-image: url('pin.png');
 }
 
 // .mapboxgl-ctrl-geocoder {
