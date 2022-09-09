@@ -13,7 +13,14 @@
 }
 
 .mapboxgl-popup-tip {
-  border-color: $purple !important; 
+  border-color: $purple !important;
+}
+
+.mapboxgl-user-location-dot {
+  background-color: $violet !important;
+}
+.mapboxgl-user-location-dot::before {
+  background: rgba($color: $violet, $alpha: 1.0)  !important;
 }
 
 .marker {

@@ -36,10 +36,11 @@ export default class extends Controller {
       positionOptions: {
       enableHighAccuracy: true
       },
+      showAccuracyCircle: false,
       // When active the map will receive updates to the device's location as it changes.
       trackUserLocation: true,
       // Draw an arrow next to the location dot to indicate which direction the device is heading.
-      showUserHeading: true
+      showUserHeading: false
       })
       );
   }
@@ -48,12 +49,14 @@ export default class extends Controller {
     this.markersValue.forEach((marker) => {
       // adds popup on markers onto map
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
+
       const customMarker = document.createElement("div")
       customMarker.className = "marker"
       customMarker.style.backgroundImage = `url('${marker.image_url}')`
       customMarker.style.backgroundSize = "contain"
       customMarker.style.width = "25px"
       customMarker.style.height = "25px"
+
         new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
         .setPopup(popup)
