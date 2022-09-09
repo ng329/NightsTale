@@ -15,8 +15,8 @@ export default class extends Controller {
     this.map = new mapboxgl.Map({
       container: this.element,
       style: "mapbox://styles/mapbox/dark-v10",
-      // center: [-79.4512, 43.6568],
-      // zoom: 13
+      center: [0.1276, 51.5072],
+      zoom: 2
     })
     // Add markers to map
     this.#addMarkersToMap()
@@ -30,6 +30,18 @@ export default class extends Controller {
       });
 
     document.getElementById('search-bar').appendChild(geocoder.onAdd(this.map));
+
+    this.map.addControl(
+      new mapboxgl.GeolocateControl({
+      positionOptions: {
+      enableHighAccuracy: true
+      },
+      // When active the map will receive updates to the device's location as it changes.
+      trackUserLocation: true,
+      // Draw an arrow next to the location dot to indicate which direction the device is heading.
+      showUserHeading: true
+      })
+      );
   }
 
   #addMarkersToMap() {
