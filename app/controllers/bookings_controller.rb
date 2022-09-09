@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to "/profile"
     else
-      render event_path(@event), status: :unprocessable_entity
+      render 'events/show', status: :unprocessable_entity
     end
   end
 
@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
   end
 
   def calculate_price(price, people)
-    total = price * people
+    total = people.nil? ? 0 : (price * people)
     return '%.2f' % total.round(2)
   end
 end
