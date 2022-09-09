@@ -25,6 +25,6 @@ export default class extends Controller {
     } else {
       this.modalTarget.style.display = "none";
     }
-
+    this.modalTarget.scrollIntoView(true)
   }
 }
