@@ -1,19 +1,27 @@
 .simple-calendar {
   table {
-    color: white;
+    color: $soft-peach !important;
   }
   .today {
-    background-color: $grey
+    background-color: $deep-purple !important;
   }
 
   .day {
     height: 3.5em;
-    color: white;
+    color: $soft-peach !important;
+  }
+
+  .prev-month {
+    background-color: $purple !important;
+  }
+
+  .next-month {
+    background-color: $purple !important;
   }
 }
 
 td {
-  color: white;
+  // color: white;
 }
 
 .booking {
