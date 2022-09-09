@@ -1,15 +1,23 @@
 
 .top-bar {
   width: 100%;
-  padding: 0.2em;
+  padding: 0.7em;
   display: flex;
   justify-content: center;
   background-color: $black;
   flex-direction: column;
 }
 
+.mapboxgl-popup-close-button {
+  color: $grey !important;
+  right: 5px !important;
+}
+
 .mapboxgl-popup-content {
   background: $purple !important;
+  padding: 1.2em !important;
+  box-shadow: 0px 6px 4px rgba(0 ,0 , 0, 0.3)  !important;
+  border: 1px solid $black !important;
 }
 
 .mapboxgl-popup-tip {
@@ -49,7 +57,8 @@
 }
 
 .fa-filter {
-  color: $grey;
+  color: $violet;
+  opacity: .8;
 }
 
 //  --------------------
@@ -109,3 +118,4 @@ form.simple_form.tags {
   background-color: $violet;
   color: white;
 }
+
