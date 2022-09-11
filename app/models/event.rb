@@ -6,6 +6,7 @@ class Event < ApplicationRecord
   has_many :users, through: :bookings
   has_many :bookings
   has_many_attached :photos
+  has_many :reviews
 
   geocoded_by :location
 

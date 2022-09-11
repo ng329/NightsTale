@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :events, only: %i[index show] do
     resources :bookings, only: %i[create]
+    resources :reviews, only: %i[new]
     get "favourites/add_to_favourites", to: "favourites#add_to_favourites"
   end
 end
