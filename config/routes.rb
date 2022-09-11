@@ -7,9 +7,7 @@ Rails.application.routes.draw do
 
   resources :events, only: %i[index show] do
     resources :bookings, only: %i[create]
-    resources :reviews, only: %i[create]
+    resources :reviews, only: %i[create destroy update]
     get "favourites/add_to_favourites", to: "favourites#add_to_favourites"
   end
-
-  resources :reviews, only: %i[destroy]
 end

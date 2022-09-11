@@ -2,6 +2,18 @@
   <%# card for each review %>
   <div class="review-card">
 
+    <%# if review belongs to current can delete or edit %>
+    <% if review.user == current_user %>
+      <%= link_to event_review_path(@event, review),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
+        <i class="fa-regular fa-trash-alt"></i>
+      <% end %>
+
+      <%# allow edit review? %>
+      <%= render "reviews/edit", review: review %>
+
+    <% end %>
+
     <h2><%= review.user.username %></h2>
 
     <%# converts rating into stars %>

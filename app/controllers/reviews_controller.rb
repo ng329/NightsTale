@@ -13,8 +13,15 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
+    @event = Event.find(params[:event_id])
     @review.destroy
-    redirect_to events_path(@review.events), status: :see_other
+    redirect_to event_path(@event), status: :see_other
+  end
+
+  def update
+    @review = Review.find(params[:id])
+    @review.update(review_params)
+    redirect_to "events/show"
   end
 
   private
