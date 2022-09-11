@@ -1,3 +1,7 @@
-<%= @event.reviews.each do |review| %>
-  <h2><%= review.content %></h2>
-<% end %>
+<%# card for each review %>
+<div class="review-card">
+  <% @event.reviews.each do |review| %>
+    <h2><%= review.user.username %></h2>
+    <p><%= review.content %></p>
+  <% end %>
+</div>
