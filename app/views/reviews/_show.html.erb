@@ -1,7 +1,15 @@
-<%# card for each review %>
-<div class="review-card">
-  <% @event.reviews.each do |review| %>
+<% @event.reviews.each do |review| %>
+  <%# card for each review %>
+  <div class="review-card">
+
     <h2><%= review.user.username %></h2>
+
+    <%# converts rating into stars %>
+    <% review.rating.times do  %>
+      <i class="fa-solid fa-star"></i>
+    <% end %>
+
     <p><%= review.content %></p>
-  <% end %>
-</div>
+
+  </div>
+<% end %>

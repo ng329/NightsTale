@@ -17,8 +17,8 @@
         <div class="modal-body">
           <%= simple_form_for [@event, @new_review] do |f| %>
             <%= f.input :content %>
-            <%= f.input :rating, as: :numeric%>
-            <%= f.submit "Add review", class: "btn btn-primary" %>
+            <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience", input_html: {data: {controller: "star-rating"}} %>
+            <%= f.submit "Add your review", class: "btn btn-primary" %>
           <% end %>
         </div>
         <div class="modal-footer">
