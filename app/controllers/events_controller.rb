@@ -16,6 +16,8 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @booking = Booking.new
+    @booking_for_event = find_bookings_for_event(@event)
+    @new_review = Review.new
     if current_user.favourites.empty?
       @favourite = nil
     else
@@ -46,5 +48,15 @@ class EventsController < ApplicationController
       }
     end
     return markers
+  end
+
+  def find_bookings_for_event(event)
+    matching_bookings = []
+    current_user.bookings.each do |booking|
+      if booking.event_id == event.id && booking.start_time.past?
+        matching_bookings << booking.event_id
+      end
+    end
+    return matching_bookings
   end
 end

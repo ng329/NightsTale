@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     resources :reviews, only: %i[create]
     get "favourites/add_to_favourites", to: "favourites#add_to_favourites"
   end
+
+  resources :reviews, only: %i[destroy]
 end
