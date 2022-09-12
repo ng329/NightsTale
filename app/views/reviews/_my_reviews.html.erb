@@ -1,0 +1,28 @@
+<div>
+  <% @user.reviews.each do |review| %>
+  <%# card for each review %>
+    <div class="review-profile-card">
+
+      <% if review.user == current_user %>
+        <%#can edit or delete review%>
+        <%= link_to event_review_path(review.event, review),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
+          <i class="fa-regular fa-trash-alt"></i>
+        <% end %>
+
+        <%# allow edit review %>
+        <%= render "reviews/edit", review: review %>
+      <% end %>
+
+      <%= link_to event_path(review.event) do %>
+        <%= review.event.name %>
+        <%# converts rating into stars %>
+        <% review.rating.times do  %>
+          <i class="fa-solid fa-star"></i>
+        <% end %>
+        <p><%= review.content %></p>
+      <% end %>
+
+    </div>
+  <% end %>
+</div>
