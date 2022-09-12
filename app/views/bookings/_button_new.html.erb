@@ -6,21 +6,21 @@
 
 <%# modal pop up for booking form%>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel">New Booking</h4>
-        </div>
-        <div class="modal-body">
-          <%= simple_form_for [@event, @booking] do |f| %>
-            <%= f.input :start_time, as: :datetime, html5: true %>
-            <%= f.input :number_of_people, as: :numeric%>
-            <%= f.submit "Book Now", class: "btn btn-primary" %>
-          <% end %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">New Booking</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for [@event, @booking] do |f| %>
+          <%= f.input :start_time, as: :datetime, html5: true %>
+          <%= f.input :number_of_people, as: :numeric%>
+          <%= f.submit "Book Now", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>

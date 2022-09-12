@@ -1,0 +1,31 @@
+<%# if user has a booking for this event and its in the past make the review button appear: %>
+<%unless @booking_for_event.nil? %>
+  <%# button for new review%>
+    <%# needs styling: %>
+  <button type="button" class="tobedescided" data-bs-toggle="modal" data-bs-target="#reviewModal">
+    New Review
+  </button>
+
+
+  <%# modal pop up for booking form%>
+  <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="reviewModalLabel">New Review</h4>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for [@event, @new_review] do |f| %>
+            <%= f.input :content %>
+            <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience", input_html: {data: {controller: "star-rating"}} %>
+            <%= f.submit "Add your review", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>

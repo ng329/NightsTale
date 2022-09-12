@@ -1,15 +1,16 @@
 <div class="container">
   <div class="image-card">
-    <%= link_to   event_favourites_add_to_favourites_path(@event) do%>
+    <%= render "reviews/new" %>
+    <%= link_to event_favourites_add_to_favourites_path(@event) do%>
       <% if @favourite.nil? %>
-        <i class="fa-regular fa-circle fa-2xl"></i>
+        <i class="fa-regular fa-heart fa-2xl"></i>
         <% else %>
-         <i class="fa-solid fa-circle fa-2xl"></i>
+         <i class="fa-solid fa-heart fa-2xl"></i>
       <% end %>
     <% end %>
     <div class="image-card-text">
-    <h1><strong><%= @event.name %></strong></h1>
-    <p><%= @event.location %></p>
+      <h1><strong><%= @event.name %></strong></h1>
+      <p><%= @event.location %></p>
     </div>
     <div class="image-event">
       <% @event.photos.each do |photo| %>
@@ -25,12 +26,13 @@
     <div class="event-info pad12 box06403">
      <h2 class="information">Information</h2>
      <p><%= @event.url %></p>
-     <p>£<%= @event.price_per_person %> price per person.</p>
+     <p><%= number_to_currency(@event.price_per_person, unit: "£")  %> price per person.</p>
      <p><%= @event.description %></p>
     </div>
     <%# <h2>Reviews</h2> %>
-    <%# <div class="event-review box06403 mar10"> %>
-    <%# </div> %>
+    <div class="event-review box06403 mar10">
+      <%= render "reviews/show" %>
+    </div>
   </div>
 </div>
 <%= render "shared/navbar" %>
