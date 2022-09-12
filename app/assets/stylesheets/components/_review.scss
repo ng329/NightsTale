@@ -1,0 +1,45 @@
+.review-username {
+  color: $grey;
+  margin: 0;
+}
+
+.review-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+  // margin-top: 7px;
+}
+
+.review-head h2 {
+  padding: 12px;
+  margin-left: 20px;
+  color: $grey;
+}
+
+.review-text {
+  margin-top: 1rem;
+  color: $soft-peach;
+}
+
+.name-star {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.star-rating {
+  margin: 0;
+}
+
+.fa-trash-alt {
+  padding-right: .7rem;
+  font-size: 1.2rem;
+  color: $grey;
+}
+
+.fa-pen-to-square {
+  padding-left: .7rem;
+  font-size: 1.2rem;
+  color: $grey;
+}
