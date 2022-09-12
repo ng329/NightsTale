@@ -1,8 +1,20 @@
-<div>
+<div class="my-review mar-vert1">
   <% @user.reviews.each do |review| %>
   <%# card for each review %>
-    <div class="review-profile-card">
-
+    <div class="event-review box06403 pad12">
+      
+      <div class="review-username">
+        <%= link_to event_path(review.event) do %>
+          <%= review.event.name %>
+      </div>
+        <%# converts rating into stars %>
+       <div class="star-rate">
+          <% review.rating.times do  %>
+            <i class="fa-solid fa-star"></i>
+          <% end %>
+       </div>
+        <p class="review-text"><%= review.content %></p>
+      <% end %>
       <% if review.user == current_user %>
         <%#can edit or delete review%>
         <%= link_to event_review_path(review.event, review),
@@ -14,14 +26,6 @@
         <%= render "reviews/edit", review: review %>
       <% end %>
 
-      <%= link_to event_path(review.event) do %>
-        <%= review.event.name %>
-        <%# converts rating into stars %>
-        <% review.rating.times do  %>
-          <i class="fa-solid fa-star"></i>
-        <% end %>
-        <p><%= review.content %></p>
-      <% end %>
 
     </div>
   <% end %>

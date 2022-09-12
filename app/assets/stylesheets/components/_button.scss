@@ -26,6 +26,6 @@
 }
 
 .btn-color {
-  background: $grey;
-  color: $purple;
+  background: rgba($color:$purple, $alpha: .9);
+  color: $grey;
 }

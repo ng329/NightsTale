@@ -14,6 +14,8 @@
   padding: 12px;
   margin-left: 20px;
   color: $grey;
+  opacity: .7;
+  color: #FEFDFD;
 }
 
 .review-text {
@@ -42,4 +44,15 @@
   padding-left: .7rem;
   font-size: 1.2rem;
   color: $grey;
+}
+
+.review-line {
+  border-bottom: solid $grey;
+  margin-top: 2rem;
+  opacity: .45;
+  width: 340px;
+}
+
+.fa-star {
+  color: $soft-peach;
 }
