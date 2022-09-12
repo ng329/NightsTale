@@ -1,6 +1,6 @@
 <div class="container">
   <div class="image-card">
-    <%= render "reviews/new" %>
+    
     <%= link_to event_favourites_add_to_favourites_path(@event) do%>
       <% if @favourite.nil? %>
         <i class="fa-regular fa-heart fa-2xl"></i>
@@ -29,8 +29,11 @@
      <p><%= number_to_currency(@event.price_per_person, unit: "£")  %> price per person.</p>
      <p><%= @event.description %></p>
     </div>
-    <%# <h2>Reviews</h2> %>
-    <div class="event-review box06403 mar10">
+    <div class="review-head mar-vert1">
+      <h2 class="information">Reviews</h2>
+      <%= render "reviews/new" %>
+    </div>
+    <div class="event-review box06403 pad12">
       <%= render "reviews/show" %>
     </div>
   </div>

@@ -1,27 +1,32 @@
 <% @event.reviews.each do |review| %>
   <%# card for each review %>
   <div class="review-card">
-
+    <div class="name-star">
+      <h2 class="review-username"><%= review.user.username %></h2>
+      <%# converts rating into stars %>
+      <div class="star-rating">
+        <% review.rating.times do  %>
+          <i class="fa-solid fa-star"></i>
+        <% end %>
+      </div>
+    </div>
     <%# if review belongs to current can delete or edit %>
-    <% if review.user == current_user %>
-      <%= link_to event_review_path(@event, review),
-          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
-        <i class="fa-regular fa-trash-alt"></i>
+   
+
+
+    <p class="review-text"><%= review.content %></p>
+
+   <div class="edit-review">
+      <% if review.user == current_user %>
+        <%= link_to event_review_path(@event, review),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
+          <i class="fa-regular fa-trash-alt review-text"></i>
+        <% end %>
+  
+        <%# allow edit review? %>
+        <%= render "reviews/edit", review: review %>
+  
       <% end %>
-
-      <%# allow edit review? %>
-      <%= render "reviews/edit", review: review %>
-
-    <% end %>
-
-    <h2><%= review.user.username %></h2>
-
-    <%# converts rating into stars %>
-    <% review.rating.times do  %>
-      <i class="fa-solid fa-star"></i>
-    <% end %>
-
-    <p><%= review.content %></p>
-
+   </div>
   </div>
 <% end %>

@@ -18,8 +18,7 @@
   box-sizing: border-box;
   position: relative;
   width: 350px;
-  height: 110px;
-  background: $grey;
+  background: $deep-purple;
   border: 1px solid $black;
   margin: auto;
 }
@@ -52,7 +51,8 @@
   position: absolute;
   top: 1em;
   right: 0.5em;
-  color: white;
+  color: $soft-peach;
+  z-index: 1000;
 }
 
 .added {
