@@ -1,6 +1,11 @@
 <div>
   <h2>Find New Friends</h2>
-  <%# search bar? %>
+
+  <%= link_to user_invitations_path() do %>
+    <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
+
+  <%# search bar %>
   <%= form_with url:  new_user_invitation_path, method: :get, class: "d-flex" do %>
     <%= text_field_tag :query,
       params[:query],
