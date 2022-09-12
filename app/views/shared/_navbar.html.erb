@@ -7,7 +7,9 @@
       <a href="/events"><i class="fa-solid fa-location-dot"></i></a>
     </div>
     <div class="icon 3">
-      <a href="/profile"><i class="fa-solid fa-user"></i></a>
+      <%= link_to user_path(current_user) do %>
+        <i class="fa-solid fa-user"></i>
+      <% end %>
     </div>
   </div>
 </div>

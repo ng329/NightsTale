@@ -3,7 +3,11 @@
 
     <%# top page profile section %>
     <div class="profile ">
-    <%= link_to "Sign out", destroy_user_session_path, class: "sign-out", data: {turbo_method: :delete} %>
+      <div class="top-buttons-profile">
+        <%= link_to "Sign out", destroy_user_session_path, class: "sign-out", data: {turbo_method: :delete} %>
+        <%# <%= link_to "Friends", friends_path(@user) %> %>
+      </div>
+
       <%= cl_image_tag @user.photo.key, class: "avatar box06403 mar10", height: 300, width: 400, crop: :fill %>
       <%# profile information: ie name %>
       <div class="profile-info">
