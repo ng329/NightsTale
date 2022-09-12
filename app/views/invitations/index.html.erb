@@ -1,0 +1,30 @@
+<div class="friends-page">
+  <h2>Friends</h2>
+
+  <%# link to find new friends %>
+  <%= link_to new_user_invitation_path(current_user) do %>
+    <i class="fa-solid fa-plus"></i>
+  <% end %>
+
+  <%# pending friend requests %>
+  <%= render "invitations/requests" %>
+
+  <%# all friends %>
+  <% @friends.each do |friend| %>
+    <div class="friend-card">
+      <%= link_to user_path(friend) do%>
+        <%= cl_image_tag friend.photo.key, class: "avatar box06403 mar10", height: 300, width: 400, crop: :fill %>
+        <h2><%= friend.username %></h2>
+      <% end %>
+
+      <%# Delete friend button %>
+      <%= link_to  user_invitation_path(current_user, request), class:'', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <i class="fa-solid fa-trash-alt"></i>
+      <% end %>
+
+    </div>
+  <% end %>
+</div>
+
+
+<%= render "shared/navbar" %>
