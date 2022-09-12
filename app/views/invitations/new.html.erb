@@ -1,0 +1,35 @@
+<div>
+  <h2>Find New Friends</h2>
+
+  <%= link_to user_invitations_path() do %>
+    <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
+
+  <%# search bar %>
+  <%= form_with url:  new_user_invitation_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a friend"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+
+  <div class="all-users">
+    <%# profile card of all users %>
+    <%@users.each do |user| %>
+      <%= link_to user_path(user) do %>
+      <%# user request info  %>
+        <%= cl_image_tag user.photo.key, class: "avatar box06403 mar10", height: 300, width: 400, crop: :fill %>
+        <h2><%= user.username %></h2>
+      <% end %>
+      <%# send friend request %>
+      <%= link_to  user_invitations_path(friend_id: user), data: { turbo_method: "post" } do %>
+        <i class="fa-solid fa-plus"></i>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+<%= render "shared/navbar" %>

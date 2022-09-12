@@ -1,0 +1,24 @@
+<div>
+  <%# list of pending friend requests %>
+  <%@pending.each do |request|%>
+    <%# card for each friend request  %>
+    <div class="friend-card">
+      <%# links to user/request profile page %>
+      <%= link_to user_path(request.user) do %>
+        <%# user request info  %>
+        <%= cl_image_tag request.user.photo.key, class: "avatar box06403 mar10", height: 300, width: 400, crop: :fill %>
+        <h2><%= request.user.username %></h2>
+      <% end %>
+
+    <%# accept reject buttons %>
+    <%= link_to user_invitation_path(current_user, request), data: { turbo_method: "patch" }, class:'btn' do %>
+      <%= icon('fa-solid', 'check')%>
+    <% end %>
+
+    <%= link_to  user_invitation_path(current_user, request), class:'btn', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+      <i class="fa-solid fa-x"></i>
+    <% end %>
+    </div>
+  <% end %>
+
+</div>
