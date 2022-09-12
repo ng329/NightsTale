@@ -14,6 +14,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    # raise
     @event = Event.find(params[:id])
     @booking = Booking.new
     @booking_for_event = find_bookings_for_event(@event)

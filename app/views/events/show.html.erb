@@ -1,6 +1,6 @@
 <div class="container">
   <div class="image-card">
-    
+
     <%= link_to event_favourites_add_to_favourites_path(@event) do%>
       <% if @favourite.nil? %>
         <i class="fa-regular fa-heart fa-2xl"></i>
@@ -18,6 +18,9 @@
       <% end %>
     </div>
     <div class="text-information">
+
+    <%= social_share_button_tag(@event.name) %>
+    <%# <%= render_shareable :buttons=> ['twitter', 'facebook', 'tumblr'] %> %>
 
     </div>
   </div>
