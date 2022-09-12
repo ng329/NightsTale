@@ -31,9 +31,13 @@
   background: rgba($color: $violet, $alpha: 1.0)  !important;
 }
 
-// .mapboxgl-ctrl-geocoder {
-//   width: 75%;
-// }
+.mapboxgl-ctrl-geocoder {
+  background: $grey;
+}
+
+.mapboxgl-ctrl-geocoder--icon{
+  fill: $violet;
+}
 
 .filter {
   width: 100%;
@@ -54,7 +58,6 @@
 
 .fa-filter {
   color: $violet;
-  opacity: .8;
 }
 
 //  --------------------
