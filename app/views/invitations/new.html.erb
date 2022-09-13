@@ -19,26 +19,33 @@
         <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
     </div>
-
   </div>
 
-    <%@users.each do |user| %>
-      <div class="friend-card mar-vert1">
-        <%# profile card of all users %>
-        <div class="friend-head">
-          <div class="av-friend">
-            <%= link_to user_path(user) do %>
-            <%# user request info  %>
-              <%= cl_image_tag user.photo.key, class: "avatar av-friend box06403", height: 300, width: 400, crop: :fill %>
-          </div>
-            <div class="friend-name"><h2><%= user.username %></h2></div>
-          <% end %>
+  <% @users.each do |friend| %>
+    <div class="friend-card box06403 mar-vert1">
+      <div class="friend-head">
+        <div class="av-friend">
+          <%= link_to user_path(friend) do%>
+            <%= cl_image_tag friend.photo.key, class: "avatar av-friend pos", height: 300, width: 400, crop: :fill %>
         </div>
-        <%# send friend request %>
-        <%= link_to  user_invitations_path(friend_id: user), data: { turbo_method: "post" } do %>
-          <i class="bin-friend fa-solid fa-plus"></i>
+          <div class="friend-name"><h2><%= friend.username %></h2></div>
         <% end %>
-    <% end %>
+      </div>
+   
+      <%= link_to  user_invitations_path(friend_id: friend), data: { turbo_method: "post" } do %>
+        <i class="bin-friend fa-solid fa-plus"></i>
+      <% end %>
+    </div>
+  <% end %>
+
+
+
+
+
+
+
+
+
     </div>
 
 </div>

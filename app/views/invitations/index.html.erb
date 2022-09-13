@@ -18,7 +18,7 @@
       <div class="friend-head">
         <div class="av-friend">
           <%= link_to user_path(friend) do%>
-            <%= cl_image_tag friend.photo.key, class: "avatar av-friend", height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag friend.photo.key, class: "avatar av-friend pos", height: 300, width: 400, crop: :fill %>
         </div>
           <div class="friend-name"><h2><%= friend.username %></h2></div>
         <% end %>
