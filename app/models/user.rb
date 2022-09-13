@@ -34,6 +34,6 @@ class User < ApplicationRecord
   pg_search_scope :search_by_email_and_username,
                   against: %i[email username],
                   using: {
-                    tsearch: { anyword: true }
+                    tsearch: { any_word: true }
                   }
 end

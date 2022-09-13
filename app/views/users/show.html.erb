@@ -6,7 +6,9 @@
       <div class="top-buttons-profile">
         <%= link_to "Sign out", destroy_user_session_path, class: "sign-out", data: {turbo_method: :delete} %>
         <% if @user == current_user %>
-          <%= link_to "Friends", user_invitations_path(@user) %>
+          <div class="friend btn">
+            <%= link_to "Friends", user_invitations_path(@user) %>
+          </div>
         <% end %>
       </div>
 
