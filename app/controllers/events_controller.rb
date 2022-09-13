@@ -52,7 +52,10 @@ class EventsController < ApplicationController
 
   def find_bookings_for_event(event)
     matching_bookings = []
-    all_bookings = current_user.bookings + current_user.friendBookings
+    all_bookings = current_user.bookings
+    current_user.friendBookings.each do |friendbooking|
+      all_bookings << friendbooking.booking
+    end
     all_bookings.each do |booking|
       if booking.event_id == event.id && booking.start_time.past?
         matching_bookings << booking.event_id

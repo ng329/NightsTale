@@ -11,7 +11,9 @@
                               data-price="<%=booking.total_price %>"
                               data-people="<%=booking.number_of_people %>"
                               data-location="<%=booking.event.location %>"
-                              data-eventid="<%=booking.event.id %>">
+                              data-eventid="<%=booking.event.id %>"
+                              data-userbooked="<%=booking.user.username %>"
+                              data-userid="<%=booking.user.id %>">
           </div>
         <% end %>
     <% end %>
