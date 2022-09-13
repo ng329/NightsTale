@@ -11,6 +11,12 @@ class UsersController < ApplicationController
     start_date = params.fetch(:start_date, Date.today).to_date
 
     # For a monthly view:
-    return Booking.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    my_bookings = Booking.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    friend_bookings = []
+    FriendBooking.all.each do |friendsbooking|
+      friend_bookings << friendsbooking.bookings.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    end
+
+    return my_bookings + friend_bookings
   end
 end
