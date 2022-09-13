@@ -1,6 +1,7 @@
 .review-username {
   color: $grey;
   margin: 0;
+  margin-bottom: .5rem;
 }
 
 .review-head {
@@ -21,6 +22,11 @@
 .review-text {
   margin-top: 1rem;
   color: $soft-peach;
+}
+
+.review-text .my-r {
+  margin: .5rem;
+  margin-top: 0;
 }
 
 .name-star {
