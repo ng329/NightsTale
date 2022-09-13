@@ -15,7 +15,11 @@
         <%= simple_form_for [@event, @booking] do |f| %>
           <%= f.input :start_time, as: :datetime, html5: true %>
           <%= f.input :number_of_people, as: :numeric%>
-          <%= f.input :friends, as: :check_boxes, collection: @friends, input_html: { multiple: true } %>
+
+          <p>Invite Friends</p>
+          <div class="friends-checkboxes">
+            <%= f.input :friends, as: :check_boxes, collection: @friends, label: "", input_html: { multiple: true, class: "friend-selector"} %>
+          </div>
          <div class="modal-book">
             <%= f.submit "Book Now", class: "modal-booking btn btn-secondary" %>
           </div>
