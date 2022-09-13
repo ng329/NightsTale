@@ -28,6 +28,10 @@ h1, h2 {
   color: $soft-peach;
 }
 
+h4 {
+  color: $grey;
+}
+
 .container {
   margin: 0px;
   padding: 0px;
@@ -44,3 +48,7 @@ h1, h2 {
   background-color: $deep-purple;
 }
 
+h6:hover {
+  text-decoration: none;
+  color: $soft-peach;
+}
