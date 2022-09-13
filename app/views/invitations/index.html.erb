@@ -4,9 +4,12 @@
     
   </div>
   <%# link to find new friends %>
-  <%= link_to new_user_invitation_path(current_user) do %>
-    <i class="fa-solid fa-plus"></i>
-  <% end %>
+  <div class="add-container">
+    <%= link_to new_user_invitation_path(current_user) do %>
+      <%# <i class="fa-solid fa-plus"></i> %>
+      <button class="btn btn-color new-friend-btn">Add new friend +</button>
+    <% end %>
+  </div>
 
   <%# pending friend requests %>
   <%= render "invitations/requests" %>
@@ -24,9 +27,11 @@
         <% end %>
       </div>
       <%# Delete friend button %>
-      <%= link_to  user_invitation_path(current_user, request), class:'', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-        <i class="bin-friend fa-solid fa-trash-alt"></i>
-      <% end %>
+      <div class="plus">
+        <%= link_to  user_invitation_path(current_user, request), class:'', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+          <i class="bin-friend fa-solid fa-trash-alt"></i>
+        <% end %>
+      </div>
 
     </div>
   <% end %>

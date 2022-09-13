@@ -28,23 +28,18 @@
           <%= link_to user_path(friend) do%>
             <%= cl_image_tag friend.photo.key, class: "avatar av-friend pos", height: 300, width: 400, crop: :fill %>
         </div>
-          <div class="friend-name"><h2><%= friend.username %></h2></div>
+          <div class="friend-name"><h2><%= friend.username %></h2>
+          </div>
         <% end %>
       </div>
    
-      <%= link_to  user_invitations_path(friend_id: friend), data: { turbo_method: "post" } do %>
-        <i class="bin-friend fa-solid fa-plus"></i>
-      <% end %>
+    <div class="plus">
+        <%= link_to  user_invitations_path(friend_id: friend), data: { turbo_method: "post" } do %>
+          <i class="bin-friend fa-solid fa-plus"></i>
+        <% end %>
+     </div>
     </div>
   <% end %>
-
-
-
-
-
-
-
-
 
     </div>
 
