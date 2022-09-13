@@ -91,7 +91,7 @@ gem "pg_search"
 gem "simple_calendar", "~> 2.4"
 
 # share event button
-gem 'social-share-button'
+# gem 'social-share-button'
 
 # gem 'shareable'
 
@@ -99,4 +99,4 @@ gem 'social-share-button'
 
 
 # jquery- for social share
-gem 'jquery-rails'
+# gem 'jquery-rails'
