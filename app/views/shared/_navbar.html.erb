@@ -1,12 +1,12 @@
 <div class="nav-container">
   <div id="nav-bar">
-    <div class="icon 1">
+    <div class="popular-icon">
       <a href="/popular"><i class="fa-solid fa-fire-flame-curved"></i></a>
     </div>
-    <div class="icon 2">
-      <a href="/events"><i class="fa-solid fa-location-dot"></i></a>
+    <div class="map-icon active-page">
+      <a href="/events"><i class="fa-solid fa-location-dot "></i></a>
     </div>
-    <div class="icon 3">
+    <div class="profile-icon active-page">
       <%= link_to user_path(current_user) do %>
         <i class="fa-solid fa-user"></i>
       <% end %>

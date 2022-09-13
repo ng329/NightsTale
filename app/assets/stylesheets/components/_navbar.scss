@@ -22,7 +22,7 @@
 //   color: $purple;
 // }
 
-.icon:nth-child(1){
+.popular-icon {
   position: absolute;
   left: 20%;
   bottom: 50%;
@@ -31,7 +31,7 @@
   transition: all .5s;
 }
 
-.icon:nth-child(2){
+.map-icon {
   position: absolute;
   left: 50%;
   bottom: 50%;
@@ -40,7 +40,7 @@
   transition: all .5s;
 }
 
-.icon:nth-child(3){
+.profile-icon {
   position: absolute;
   left: 80%;
   bottom: 50%;
@@ -72,9 +72,17 @@
   font-size: 1em;
 }
 
-.icon:active {
-  color: pink;
+
+.active-page {
+  background-color: $violet;
+  border-radius: 15px;
+  transform: translate(-50%,50%);
+  bottom: 105%;
+  position: absolute;
+  width: 4rem;
+  display: flex;
 }
+x
 
 .icon img {
   width: 40px;
@@ -84,13 +92,8 @@
 }
 
 .fa-fire-flame-curved {
-  background: #5F43B2;
-  padding: 10px;
-  border-radius: 15px;
   color: white;
   font-size: 2rem;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
 }
     
 .fa-location-dot {
@@ -101,4 +104,9 @@
 .fa-user {
   color: $soft-peach;
   font-size: 2rem;
+}
+
+.fa-solid {
+  display: flex;
+  justify-content: center;
 }
