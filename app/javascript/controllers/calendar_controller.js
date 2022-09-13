@@ -25,9 +25,11 @@ export default class extends Controller {
                           </a>
                     </div>`
       this.modalTarget.innerHTML = bookingInfo;
+      this.modalTarget.scrollIntoView(true)
     } else {
+      // this.bookingTarget.scrollIntoView(true)
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       this.modalTarget.style.display = "none";
     }
-    this.modalTarget.scrollIntoView(true)
   }
 }
