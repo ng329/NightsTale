@@ -1,38 +1,44 @@
 <div class="friends-page">
   <div class="titlebox">
-    <h2>Find New Friends</h2>
+
+    <%# <div class="title-back"> %>
+      <%= link_to user_invitations_path() do %>
+        <i class="fa-solid fa-arrow-left"></i>
+      <% end %>
+      <h2>Find New Friends</h2>
+    <%# </div> %>
   
-    <%= link_to user_invitations_path() do %>
-      <i class="fa-solid fa-arrow-left"></i>
-    <% end %>
-    <%# search bar %>
-    <%= form_with url:  new_user_invitation_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a friend"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
+
+    <div class="find-friend">
+      <%= form_with url:  new_user_invitation_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a friend"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
     </div>
 
-        <%@users.each do |user| %>
-    <div class="friend-card mar-vert1">
-      <%# profile card of all users %>
-     <div class="friend-head">
-          <div class="av-friend>
+  </div>
+
+    <%@users.each do |user| %>
+      <div class="friend-card mar-vert1">
+        <%# profile card of all users %>
+        <div class="friend-head">
+          <div class="av-friend">
             <%= link_to user_path(user) do %>
             <%# user request info  %>
               <%= cl_image_tag user.photo.key, class: "avatar av-friend box06403", height: 300, width: 400, crop: :fill %>
           </div>
             <div class="friend-name"><h2><%= user.username %></h2></div>
           <% end %>
-     </div>
+        </div>
         <%# send friend request %>
         <%= link_to  user_invitations_path(friend_id: user), data: { turbo_method: "post" } do %>
           <i class="bin-friend fa-solid fa-plus"></i>
         <% end %>
-      <% end %>
+    <% end %>
     </div>
 
 </div>

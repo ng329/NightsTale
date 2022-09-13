@@ -2,10 +2,19 @@
   width: 100%;
   background-color: black;
   padding: 2em;
+  display: flex;
+  flex-direction: column;
 
   h3 {
     color: $soft-peach;
     text-align: center;
     font-size: 2rem;
   }
+}
+
+//
+
+.title-back {
+  display: flex;
+  flex-direction: row;
 }
