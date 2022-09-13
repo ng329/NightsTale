@@ -47,7 +47,97 @@ file = URI.open("https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ix
 user3.photo.attach(io: file, filename: "profile_pic.jpg", content_type: "image/jpeg")
 user3.save
 
+user4 = User.new(
+  username: "Ghost",
+  email: "g.smith@gmail.com",
+  password: "password",
+  password_confirmation: "password"
+)
+
+file = URI.open("https://images.unsplash.com/photo-1635107510862-53886e926b74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60")
+user4.photo.attach(io: file, filename: "profile_pic.jpg", content_type: "image/jpeg")
+user4.save
+
+user5 = User.new(
+  username: "Paul",
+  email: "paul@gmail.com",
+  password: "password",
+  password_confirmation: "password"
+)
+
+file = URI.open("https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60")
+user5.photo.attach(io: file, filename: "profile_pic.jpg", content_type: "image/jpeg")
+user5.save
+
+user6 = User.new(
+  username: "Carol",
+  email: "carol@gmail.com",
+  password: "password",
+  password_confirmation: "password"
+)
+
+file = URI.open("https://images.unsplash.com/photo-1616356257367-9cd4bf56a45e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODV8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60")
+user6.photo.attach(io: file, filename: "profile_pic.jpg", content_type: "image/jpeg")
+user6.save
+
+user7 = User.new(
+  username: "Rose",
+  email: "rose@gmail.com",
+  password: "password",
+  password_confirmation: "password"
+)
+
+file = URI.open("https://images.unsplash.com/photo-1522307837370-cc113a36b784?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60")
+user7.photo.attach(io: file, filename: "profile_pic.jpg", content_type: "image/jpeg")
+user7.save
+
+user8 = User.new(
+  username: "Horatio",
+  email: "horatio@gmail.com",
+  password: "password",
+  password_confirmation: "password"
+)
+
+file = URI.open("https://images.unsplash.com/photo-1586962358070-16a0f05b8e67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60")
+user8.photo.attach(io: file, filename: "profile_pic.jpg", content_type: "image/jpeg")
+user8.save
+
+user9 = User.new(
+  username: "Lionheart",
+  email: "l.heart@gmail.com",
+  password: "password",
+  password_confirmation: "password"
+)
+
+file = URI.open("https://images.unsplash.com/photo-1632922267756-9b71242b1592?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzN8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60")
+user9.photo.attach(io: file, filename: "profile_pic.jpg", content_type: "image/jpeg")
+user9.save
+
+user10 = User.new(
+  username: "Daisy",
+  email: "daisy@gmail.com",
+  password: "password",
+  password_confirmation: "password"
+)
+
+file = URI.open("https://images.unsplash.com/photo-1510771463146-e89e6e86560e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60")
+user10.photo.attach(io: file, filename: "profile_pic.jpg", content_type: "image/jpeg")
+user10.save
 puts "finished users"
+
+
+puts "linking friends"
+Invitation.create(user_id: user2.id, friend_id: user1.id, confirmed: true)
+Invitation.create(user_id: user2.id, friend_id: user3.id, confirmed: true)
+Invitation.create(user_id: user2.id, friend_id: user4.id, confirmed: true)
+Invitation.create(user_id: user2.id, friend_id: user5.id, confirmed: true)
+Invitation.create(user_id: user2.id, friend_id: user6.id, confirmed: true)
+Invitation.create(user_id: user2.id, friend_id: user7.id, confirmed: true)
+Invitation.create(user_id: user2.id, friend_id: user8.id, confirmed: true)
+Invitation.create(user_id: user2.id, friend_id: user9.id, confirmed: true)
+Invitation.create(user_id: user2.id, friend_id: user10.id, confirmed: true)
+
+puts "finished linking friends"
 
 puts "scraping data"
 

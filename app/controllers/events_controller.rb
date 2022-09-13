@@ -1,8 +1,6 @@
 class EventsController < ApplicationController
   def index
-    # raise
     if params["tags"].present?
-      # raise
       tags = "#{params['tags']['food']} #{params['tags']['escape']} #{params['tags']['adventure']} #{params['tags']['outdoor']} #{params['tags']['theatre']} #{params['tags']['cinema']} #{params['tags']['gaming']}"
       @events = Event.search_tags(tags)
     else
@@ -17,6 +15,7 @@ class EventsController < ApplicationController
     # raise
     @event = Event.find(params[:id])
     @booking = Booking.new
+    @friends = find_friend_username
     @booking_for_event = find_bookings_for_event(@event)
     @new_review = Review.new
     if current_user.favourites.empty?
@@ -53,11 +52,23 @@ class EventsController < ApplicationController
 
   def find_bookings_for_event(event)
     matching_bookings = []
-    current_user.bookings.each do |booking|
+    all_bookings = current_user.bookings
+    current_user.friendBookings.each do |friendbooking|
+      all_bookings << friendbooking.booking
+    end
+    all_bookings.each do |booking|
       if booking.event_id == event.id && booking.start_time.past?
         matching_bookings << booking.event_id
       end
     end
     return matching_bookings
+  end
+
+  def find_friend_username
+    name = []
+    current_user.friends.each do |friend|
+      name << friend.username
+    end
+    return name
   end
 end
