@@ -20,6 +20,9 @@ export default class extends Controller {
                             <p>Number of people: ${this.bookingTarget.dataset.people}</p>
                             <p>Total price: ${this.bookingTarget.dataset.price}</p>
                           </a>
+                          <a href="/users/${this.bookingTarget.dataset.userid}">
+                            <p>Individual who booked: ${this.bookingTarget.dataset.userbooked}</p>
+                          </a>
                     </div>`
       this.modalTarget.innerHTML = bookingInfo;
     } else {
