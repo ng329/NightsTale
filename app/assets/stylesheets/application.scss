@@ -9,6 +9,10 @@
 @import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 @import "simple_calendar";
 @import "star-rating.js/dist/star-rating.css";
+@import "social-share-button";
+/*
+#= require social-share-button
+*/
 
 // Your CSS partials
 @import "components/index";
