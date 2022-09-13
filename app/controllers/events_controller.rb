@@ -12,6 +12,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    # raise
     @event = Event.find(params[:id])
     @booking = Booking.new
     @friends = find_friend_username

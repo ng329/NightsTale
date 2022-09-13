@@ -1,0 +1,29 @@
+.modal-content {
+  background-color: $purple;
+}
+
+.form-label {
+  color: $soft-peach;
+}
+
+.form-control {
+  background-color: $grey;
+  display: flex;
+  width: 14rem;
+}
+
+.form-select {
+  background-color: $grey;
+  display: flex;
+  width: 14rem;
+}
+
+.modal-booking {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+#new_booking, #new_review {
+  display: flex !important;
+  flex-direction: column !important;
+}

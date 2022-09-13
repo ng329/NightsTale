@@ -16,7 +16,9 @@
           <%= f.input :start_time, as: :datetime, html5: true %>
           <%= f.input :number_of_people, as: :numeric%>
           <%= f.input :friends, as: :check_boxes, collection: @friends, input_html: { multiple: true } %>
-          <%= f.submit "Book Now", class: "btn btn-primary" %>
+         <div class="modal-book">
+            <%= f.submit "Book Now", class: "modal-booking btn btn-secondary" %>
+          </div>
         <% end %>
       </div>
       <div class="modal-footer">

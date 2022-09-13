@@ -3,3 +3,5 @@
 //= link_tree ../builds
 
 //= link application.css
+
+//= require social-share-button
