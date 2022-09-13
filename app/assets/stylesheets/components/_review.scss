@@ -1,6 +1,7 @@
 .review-username {
   color: $grey;
   margin: 0;
+  margin-bottom: .5rem;
 }
 
 .review-head {
@@ -14,11 +15,18 @@
   padding: 12px;
   margin-left: 20px;
   color: $grey;
+  opacity: .7;
+  color: #FEFDFD;
 }
 
 .review-text {
   margin-top: 1rem;
   color: $soft-peach;
+}
+
+.review-text .my-r {
+  margin: .5rem;
+  margin-top: 0;
 }
 
 .name-star {
@@ -42,4 +50,15 @@
   padding-left: .7rem;
   font-size: 1.2rem;
   color: $grey;
+}
+
+.review-line {
+  border-bottom: solid $grey;
+  margin-top: 2rem;
+  opacity: .45;
+  width: 340px;
+}
+
+.fa-star {
+  color: $soft-peach;
 }
