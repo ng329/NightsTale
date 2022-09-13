@@ -1,11 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
+import { SingleEntryPlugin } from "webpack";
 
 // Connects to data-controller="calendar"
 export default class extends Controller {
   static targets = ["booking", "modal"]
 
   connect() {
-    // console.log("connect")
+    console.log("connect")
   }
 
   appear() {
@@ -28,8 +29,8 @@ export default class extends Controller {
       this.modalTarget.scrollIntoView(true)
     } else {
       // this.bookingTarget.scrollIntoView(true)
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      this.modalTarget.style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      // this.modalTarget.style.display = "none";
     }
   }
 }
