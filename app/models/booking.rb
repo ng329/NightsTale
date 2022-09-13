@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :event
-  has_many :friendBookings
+  has_many :friendBookings, dependent: :destroy
 
   attr_accessor :friends
 

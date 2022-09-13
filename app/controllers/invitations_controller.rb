@@ -27,6 +27,7 @@ class InvitationsController < ApplicationController
     redirect_to user_invitations(current_user), status: :see_other
   end
 
+
   def update
     @invitation = Invitation.find(params[:id])
     @invitation.confirmed = true
