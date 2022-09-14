@@ -9,14 +9,15 @@ export default class extends Controller {
     markers: Array
   }
   connect() {
+    // console.log("5")
     mapboxgl.accessToken = this.apiKeyValue
 
     // creates new map
     this.map = new mapboxgl.Map({
       container: this.element,
       style: "mapbox://styles/mapbox/dark-v10",
-      center: [0.1276, 51.5072],
-      zoom: 2
+      center: [-0.072736, 51.51313],
+      zoom: 14
     })
     // Add markers to map
     this.#addMarkersToMap()
@@ -43,6 +44,7 @@ export default class extends Controller {
       showUserHeading: false
       })
       );
+
   }
 
   #addMarkersToMap() {
@@ -67,6 +69,6 @@ export default class extends Controller {
   #fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+    this.map.fitBounds(bounds, { padding: 70, maxZoom: 50, duration:1500 })
   }
 }
