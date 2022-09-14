@@ -9,6 +9,12 @@
           <div class="friend btn">
             <%= link_to "Friends", user_invitations_path(@user) %>
           </div>
+        <% else %>
+          <div class="friend">
+            <%= link_to user_invitations_path(current_user) do %>
+              <i class="fa-solid fa-arrow-left"></i>
+            <% end %>
+          </div>
         <% end %>
       </div>
 

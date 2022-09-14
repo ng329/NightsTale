@@ -10,8 +10,10 @@ require "open-uri"
 require 'json'
 require 'rest-client'
 
+puts "clear database"
 User.destroy_all
 Event.destroy_all
+puts "finished clear"
 
 puts "creating users"
 user1 = User.new(
@@ -125,25 +127,31 @@ user10.photo.attach(io: file, filename: "profile_pic.jpg", content_type: "image/
 user10.save
 puts "finished users"
 
-
 puts "linking friends"
 Invitation.create(user_id: user2.id, friend_id: user1.id, confirmed: true)
 Invitation.create(user_id: user2.id, friend_id: user3.id, confirmed: true)
 Invitation.create(user_id: user2.id, friend_id: user4.id, confirmed: true)
-Invitation.create(user_id: user2.id, friend_id: user5.id, confirmed: true)
-Invitation.create(user_id: user2.id, friend_id: user6.id, confirmed: true)
-Invitation.create(user_id: user2.id, friend_id: user7.id, confirmed: true)
 Invitation.create(user_id: user2.id, friend_id: user8.id, confirmed: true)
 Invitation.create(user_id: user2.id, friend_id: user9.id, confirmed: true)
 Invitation.create(user_id: user2.id, friend_id: user10.id, confirmed: true)
 
+Invitation.create(user_id: user1.id, friend_id: user3.id, confirmed: true)
+Invitation.create(user_id: user1.id, friend_id: user4.id, confirmed: true)
+Invitation.create(user_id: user1.id, friend_id: user6.id, confirmed: true)
+Invitation.create(user_id: user1.id, friend_id: user8.id, confirmed: true)
+Invitation.create(user_id: user1.id, friend_id: user9.id, confirmed: true)
+Invitation.create(user_id: user1.id, friend_id: user10.id, confirmed: true)
+
+Invitation.create(user_id: user3.id, friend_id: user4.id, confirmed: true)
+Invitation.create(user_id: user3.id, friend_id: user6.id, confirmed: true)
+Invitation.create(user_id: user3.id, friend_id: user8.id, confirmed: true)
+Invitation.create(user_id: user3.id, friend_id: user7.id, confirmed: true)
+Invitation.create(user_id: user3.id, friend_id: user9.id, confirmed: true)
+Invitation.create(user_id: user3.id, friend_id: user10.id, confirmed: true)
+
 puts "finished linking friends"
 
-puts "scraping data"
-
-puts "finished scraping"
-
-puts "hand input data"
+puts "event hand input data"
 
 event1 = Event.new(
   name: "Park Row",
@@ -184,13 +192,13 @@ event3.save
 event4 = Event.new(
   name: "Moriarty's Game",
   location: "The Marylebone Pub, 93 Marylebone High St, London W1U 4RE",
-  description: "Professor James Moriarty invites you to celebrate the finest minds in London by solving his mysterious challenge, which he has personally prepared. Succeed, and he promises to make you an offer you can’t refuse...",
+  description: "Professor James Moriarty invites you to celebrate the finest minds in London by solving his mysterious challenge, which he has personally prepared. Succeed, and he promises to make you an offer you can't refuse...",
   tags: "Outdoor",
   url: "https://www.inthehiddencity.com/london/moriartys-game-the-professors-invitation",
   price_per_person: 25.00
 )
-file = URI.open("https://www.google.com/maps/place/Moriarty's+Game:+The+Professor's+Invitation+by+HiddenCity/@51.5198397,-0.1520172,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMV-AzaquhlpwKMW63U4qOWRg2lun92qHFhTVzZ!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMV-AzaquhlpwKMW63U4qOWRg2lun92qHFhTVzZ%3Dw138-h86-k-no!7i1890!8i1172!4m5!3m4!1s0x0:0x9a32bdaf1cd86616!8m2!3d51.5198896!4d-0.152025#")
-event4.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+file = URI.open("https://www.culturewhisper.com/images/thumbs/cw-9283-660x375.jpg")
+event4.photos.attach(io: file, filename: "hiddencity1.jpg", content_type: "image/jpeg")
 event4.save
 
 event5 = Event.new(
@@ -201,8 +209,8 @@ event5 = Event.new(
   url: "https://www.inthehiddencity.com/london/the-hunt-for-the-cheshire-cat",
   price_per_person: 25.00
 )
-file = URI.open("https://www.google.com/maps/place/The+Hunt+for+the+Cheshire+Cat+by+HiddenCity/@51.5102228,-0.1212197,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPiQEHDTUuT69VviwqIJZaAoPkjVyyI9WvOL08a!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPiQEHDTUuT69VviwqIJZaAoPkjVyyI9WvOL08a%3Dw114-h86-k-no!7i4032!8i3024!4m5!3m4!1s0x0:0x69c1aebe4dbd4de4!8m2!3d51.5103721!4d-0.1211373#")
-event5.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+file = URI.open("https://www.culturewhisper.com/images/uploads/cw-22849.jpg")
+event5.photos.attach(io: file, filename: "hiddencity2.jpg", content_type: "image/jpeg")
 event5.save
 
 event6 = Event.new(
@@ -210,26 +218,26 @@ event6 = Event.new(
   location: "South Kensington Station Arcade, South Kensington, London",
   description: "Mirror, mirror on the wall… Embark on a fairytale quest to find the Enchanted Mirror and prove yourself the wisest of them all. But beware the tricks of a deceitful Queen, and the fate of those who fail...",
   tags: "Outdoor",
-  url: "https://www.inthehiddencity.com/london/the-hunt-for-the-cheshire-cat",
+  url: "https://www.inthehiddencity.com/london/the-enchanted-mirror",
   price_per_person: 25.00
 )
 file = URI.open("https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/12/12/1386830497013/SKen.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=4d9ee3c3772c731ce391c9130b0106e7")
-event6.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event6.photos.attach(io: file, filename: "hiddencity3.jpg", content_type: "image/jpeg")
 event6.save
 
-event6 = Event.new(
+event7 = Event.new(
   name: "Backyard Cinema",
   location: "2 Armoury Way, London, SW18 1SH",
   description: "The UK's most magical cinema is back, and this time, we're taking you on an Arctic voyage to the top of the world. Follow constellations of twinkling stars that will guide you to the Northern Lights and your giant beanbag, surrounded by snow topped trees to enjoy your favourite movies.",
   tags: "Cinema",
-  url: "https://backyardcinema.co.uk/london/?filter=2022-10",
+  url: "https://backyardcinema.co.uk/london/",
   price_per_person: 20.00
 )
 file = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/c7/1c/17/getlstd-property-photo.jpg?w=1200&h=-1&s=1")
-event6.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
-event6.save
+event7.photos.attach(io: file, filename: "backyardcinema.jpg", content_type: "image/jpeg")
+event7.save
 
-event7 = Event.new(
+event8 = Event.new(
   name: "Monopoly Lifesized",
   location: "213 Tottenham Court Road, W1T 7PS",
   description: "Located in the heart of London, Monopoly Lifesized is an immersive, on-your-feet version of the world's favourite family game brand played on a 15m x 15m lifesized Monopoly board! Compete in one of a kind challenges for your chance to buy properties. Experience the thrill of trying to stage a heist in Mayfair, competing against a clock to build some of London’s iconic buildings, solving a baffling murder mystery or stepping into the world of codebreakers.",
@@ -238,10 +246,10 @@ event7 = Event.new(
   price_per_person: 49.00
 )
 file = URI.open("https://jupiterhadley.com/wp-content/uploads/2021/09/IMG_8876.jpg")
-event7.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
-event7.save
+event8.photos.attach(io: file, filename: "monopoly.jpg", content_type: "image/jpeg")
+event8.save
 
-event8 = Event.new(
+event9 = Event.new(
   name: "Jeff Wayne's The War of the Worlds",
   location: "56 Leadenhall Street, London, EC3A 2BJ",
   description: "Make lasting memories with friends and family as you journey through 24 interactive scenes where 12 live actors, state-of-the-art virtual reality and sensational 5D effects create a breath-taking experience - all with Jeff Wayne's multi-award double album of The War of the Worlds as your soundtrack. Come face to face with a 300 foot Martian Fighting Machines, sneak into a deserted Victorian house, sail out to sea and witness the battle between the Martians and HMS Thunder Child, and fly to Mars in a hot air balloon.  Experience a world beyond your own, and get ready to discover your greatest adventure yet.",
@@ -250,22 +258,22 @@ event8 = Event.new(
   price_per_person: 40.00
 )
 file = URI.open("https://www.thewaroftheworlds.com/site/assets/files/3646/278485500_10158738298044290_6864718081938819132_n.510x510.jpeg")
-event8.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
-event8.save
+event9.photos.attach(io: file, filename: "warofworlds.jpg", content_type: "image/jpeg")
+event9.save
 
-event9 = Event.new(
+event10 = Event.new(
   name: "The Murder Express Part Deux",
   location: "Pedley Street Station, Arch 63, Pedley Street, London, E1",
   description: "The year is 1937, the height of the British Empire, and Britain's most famous archeologist, Dr. Errol Earhart, has unearthed the world's most valuable diamond, the Jewel of the Empire, which is being transported to the Von Cleethorpes estate via Pedley Street station's, Murdér Express. Along for the journey are a host of new characters, including the dashing Errol Earhart and the mysterious Miss Marie as well as some familiar faces. It's not long before the diamond is missing, bodies are beginning to pile up and the clock is ticking to catch a killer and recover the Jewel of the Empire. ",
-  tags: "Food & Drink / Theatre",
+  tags: "Theatre",
   url: "https://www.funicularproductions.com/",
   price_per_person: 65.00
 )
 file = URI.open("https://static.designmynight.com/uploads/2019/05/Inspector2-optimised.png")
-event9.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
-event9.save
+event10.photos.attach(io: file, filename: "murderexpress.jpg", content_type: "image/png")
+event10.save
 
-event10 = Event.new(
+event11 = Event.new(
   name: "Supercharged VR",
   location: "148 Tilbury Road, Leyton, London, E10 6RE",
   description: "Race with up to parties of 6 people. Get ready for intense (and hopefully fair) wheel to wheel battles as you try and assert your dominance on track using your race-craft! Only one person will be crowned champion!",
@@ -274,6 +282,105 @@ event10 = Event.new(
   price_per_person: 20.00
 )
 file = URI.open("https://static.designmynight.com/uploads/2022/05/New-profile1-optimised.jpg")
-event10.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
-event10.save
-puts "finished"
+event11.photos.attach(io: file, filename: "supercharge.jpg", content_type: "image/jpeg")
+event11.save
+puts "finished events"
+
+puts "adding favourites"
+Favourite.create(user: user1, event: event1)
+Favourite.create(user: user1, event: event2)
+Favourite.create(user: user1, event: event3)
+Favourite.create(user: user1, event: event4)
+Favourite.create(user: user1, event: event11)
+
+Favourite.create(user: user2, event: event2)
+Favourite.create(user: user2, event: event4)
+Favourite.create(user: user2, event: event3)
+Favourite.create(user: user2, event: event9)
+Favourite.create(user: user2, event: event10)
+
+Favourite.create(user: user3, event: event2)
+Favourite.create(user: user3, event: event7)
+Favourite.create(user: user3, event: event8)
+Favourite.create(user: user3, event: event11)
+Favourite.create(user: user3, event: event9)
+
+Favourite.create(user: user4, event: event2)
+Favourite.create(user: user4, event: event1)
+Favourite.create(user: user4, event: event4)
+Favourite.create(user: user4, event: event5)
+Favourite.create(user: user4, event: event10)
+
+Favourite.create(user: user5, event: event2)
+Favourite.create(user: user5, event: event5)
+Favourite.create(user: user5, event: event11)
+Favourite.create(user: user5, event: event8)
+Favourite.create(user: user5, event: event9)
+
+Favourite.create(user: user6, event: event10)
+Favourite.create(user: user6, event: event2)
+Favourite.create(user: user6, event: event6)
+Favourite.create(user: user6, event: event8)
+Favourite.create(user: user6, event: event9)
+
+Favourite.create(user: user7, event: event2)
+Favourite.create(user: user7, event: event10)
+Favourite.create(user: user7, event: event3)
+Favourite.create(user: user7, event: event4)
+Favourite.create(user: user7, event: event7)
+
+Favourite.create(user: user8, event: event1)
+Favourite.create(user: user8, event: event6)
+Favourite.create(user: user8, event: event7)
+Favourite.create(user: user8, event: event8)
+Favourite.create(user: user8, event: event9)
+
+Favourite.create(user: user9, event: event1)
+Favourite.create(user: user9, event: event2)
+Favourite.create(user: user9, event: event3)
+Favourite.create(user: user9, event: event4)
+Favourite.create(user: user9, event: event6)
+
+Favourite.create(user: user10, event: event7)
+Favourite.create(user: user10, event: event8)
+Favourite.create(user: user10, event: event9)
+Favourite.create(user: user10, event: event11)
+Favourite.create(user: user10, event: event1)
+puts "finished favourties"
+
+puts "adding reviews"
+Review.create(user: user2, event: event1, content: "I had the pleasure of going twice and it was incredible. If you're a DC / Batman fan this restaurant is for you. The ambience is amazing, themed cocktails very instagramable and food was delicious.", rating: 5)
+Review.create(user: user6, event: event1, content: "Fantastic dinner! Great food, delicious cocktails and excellent service. The atmosphere and ambience is amazing. Live music, and cool decor with a subtle DC/Batman theme.", rating: 4)
+
+Review.create(user: user8, event: event2, content: "I could not recommend this experience enough! Booked it with a couple of friends, not knowing what to expect but had read that it was from the same people that created the crystal maze live experience which was also spectacular, so was hopeful it would reach those heights. It did not disappoint!", rating: 4)
+
+Review.create(user: user10, event: event3, content: "Loved our Sherlock escape room experience - very clever set up, welcoming staff and fun (but tricky) challenges. Quite tough for 2 people as lots to do, but it certainly kept us occupied, and there is a bar you unwind in afterwards. The theming and atmosphere is outstanding, and there are extensive appearances from some very recognisable faces! Would thoroughly recommend to anyone likes this sort of experience.", rating: 3)
+
+Review.create(user: user6, event: event3, content: "We came here for my birthday and I cannot recommend the experience highly enough for fans of BBC Sherlock. It's incredibly immersive, from the moment you step through the front door, to the very end, and there are so many little details that can be picked up by fans of the show, so make sure you keep your eyes peeled!", rating: 5)
+
+Review.create(user: user8, event: event4, content: "Spent the whole day following clues and puzzles around a small area of London. Lots of good spots to stop and have a drink or some food along the way too. Some puzzles we felt confident about but others required a little more thinking but weren't impossible, all the clues were really thought out though and followed a good theme.", rating: 3)
+
+Review.create(user: user5, event: event5, content: "It was very enjoyable solving the clues whilst seeing lots of London’s quirky backstreets and sights you wouldn’t normally get to see. It was great to start & end in a pub for food & drink supplies. We thought it was well thought out, hard to begin with but loved the challenges.", rating: 4)
+
+Review.create(user: user1, event: event5, content: "It's a great way to explore parts of the city you've never seen before, while testing your brain with some sneaky, and some easy clues! Our group were different ages, and there was something for everyone.", rating: 4)
+
+Review.create(user: user8, event: event6, content: "It was great to discover new places that we've never visited before while solving the puzzles in this game. It's well designed and good fun; we took about 4 hours in total because we took the full time allocated to the optional rest stops which were all in great venues. I would definitely recommend this as an activity whilst in London!", rating: 5)
+
+Review.create(user: user9, event: event7, content: "Two major problems - really delayed food and no experience! Apparently there was supposed to be a performance before the movie... but an entire group of ~15 people missed it due to the chaos.", rating: 2)
+
+Review.create(user: user3, event: event7, content: "This was a 10/10 experience! Loved the Christmas concept and the staff were all so friendly x drinks and food were good and you didn’t feel rushed through the experience x loved it, would defiantly visit again!", rating: 4)
+
+Review.create(user: user8, event: event8, content: "I didn’t expect it to be this fun but OMG this was one of the best experiences I’ve had this year. We were so lucky to have IRON GOSLING as our host who was fun and had super positive energy which made the experience so much better. I would definitely do this again but on another board.", rating: 5)
+
+Review.create(user: user5, event: event8, content: "From the moment we arrived at the front door the staff were very friendly and welcoming. The game itself would of been great fun and the tokens were fantastic actors. But the overall experience was awful. It was such a shame but I feel the experience was so very rushed from the moment you go into the game room, it was spoilt because you don’t have time to enjoy any of the experience.", rating: 1)
+
+Review.create(user: user7, event: event9, content: "Great experience with fabulous actors. If there was 6 stars I’d give them. A little frightening but was always made feel safe. The only little niggle is I wished they played more of the music in the restaurant whilst we were waiting.", rating: 5)
+
+Review.create(user: user4, event: event10, content: "This is such a good night out- the food, the actors, drinks, everything! The acting from Clare was great! Do I sense a feel of Peaky Blinders from her?? (LOVE THAT SHOW) Contemplating going back here with friends soon, yea it is that good!", rating: 5)
+
+Review.create(user: user6, event: event10, content: "This is by FAR our FAVOURITE immersive event! Everyone was amazing but huge shoutout to the Clare Sloane who plays the French Madame and also Phil who played the French detective! Great ambience, great food, great production, great personalities- we will be back!", rating: 5)
+
+Review.create(user: user9, event: event11, content: "Very welcoming, informative and well organised. Excellent experience and very realistic. Would recommend to anyone who loves motor racing.", rating: 3)
+puts "finished reviews"
+
+puts "all done"
