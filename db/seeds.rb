@@ -17,8 +17,8 @@ puts "finished clear"
 
 puts "creating users"
 user1 = User.new(
-  username: "Keith",
-  email: "k.dawg@gmail.com",
+  username: "Ed",
+  email: "E.shotton@gmail.com",
   password: "password",
   password_confirmation: "password"
 )
