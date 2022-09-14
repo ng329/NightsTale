@@ -37,6 +37,21 @@ h4 {
   padding: 0px;
 }
 
+.add-container {
+  // margin: 4.7rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.pos-ab2 {
+  // position: absolute;
+  // left: 1rem;
+  // top: 7.3rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
 .information {
   color: $grey;
   margin: 0;
@@ -51,4 +66,12 @@ h4 {
 h6:hover {
   text-decoration: none;
   color: $soft-peach;
+}
+
+
+// position
+
+.pos {
+  position: absolute;
+  left: 0rem;
 }

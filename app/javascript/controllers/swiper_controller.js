@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus";
-import Swiper, { Navigation, Pagination} from "swiper";
+import Swiper, { Navigation, Pagination } from "swiper";
 // import 'swiper/css/bundle';
 // import 'swiper/css';
 // import 'swiper/css/pagination'
@@ -8,6 +8,8 @@ import Swiper, { Navigation, Pagination} from "swiper";
 // Connects to data-controller="swiper"
 export default class extends Controller {
   connect() {
+    Swiper.use([Navigation, Pagination]);
+    
     const swiper = new Swiper('.swiper', {
       speed: 400,
       spaceBetween: 0,
