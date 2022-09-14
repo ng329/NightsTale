@@ -22,11 +22,10 @@ class InvitationsController < ApplicationController
   end
 
   def destroy
-    @invitation = Invitation.find(params[:id])
+    @invitation = Invitation.find_by(friend_id: params[:id])
     @invitation.destroy
-    redirect_to user_invitations(current_user), status: :see_other
+    redirect_to user_invitations_path(current_user), status: :see_other
   end
-
 
   def update
     @invitation = Invitation.find(params[:id])

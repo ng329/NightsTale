@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["booking", "modal"]
 
   connect() {
-    // console.log("connect")
+    console.log("5")
   }
 
   appear() {
@@ -25,9 +25,12 @@ export default class extends Controller {
                           </a>
                     </div>`
       this.modalTarget.innerHTML = bookingInfo;
+      this.modalTarget.scrollIntoView(true)
     } else {
-      this.modalTarget.style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      this.timeout = setTimeout(() => (
+        this.modalTarget.style.display = "none"
+      ), 200);
     }
-    this.modalTarget.scrollIntoView(true)
   }
 }
