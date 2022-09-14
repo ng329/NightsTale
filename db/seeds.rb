@@ -10,8 +10,10 @@ require "open-uri"
 require 'json'
 require 'rest-client'
 
+puts "clear database"
 User.destroy_all
 Event.destroy_all
+puts "finished clear"
 
 puts "creating users"
 user1 = User.new(
@@ -190,13 +192,13 @@ event3.save
 event4 = Event.new(
   name: "Moriarty's Game",
   location: "The Marylebone Pub, 93 Marylebone High St, London W1U 4RE",
-  description: "Professor James Moriarty invites you to celebrate the finest minds in London by solving his mysterious challenge, which he has personally prepared. Succeed, and he promises to make you an offer you can’t refuse...",
+  description: "Professor James Moriarty invites you to celebrate the finest minds in London by solving his mysterious challenge, which he has personally prepared. Succeed, and he promises to make you an offer you can't refuse...",
   tags: "Outdoor",
   url: "https://www.inthehiddencity.com/london/moriartys-game-the-professors-invitation",
   price_per_person: 25.00
 )
-file = URI.open("https://www.google.com/maps/place/Moriarty's+Game:+The+Professor's+Invitation+by+HiddenCity/@51.5198397,-0.1520172,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMV-AzaquhlpwKMW63U4qOWRg2lun92qHFhTVzZ!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMV-AzaquhlpwKMW63U4qOWRg2lun92qHFhTVzZ%3Dw138-h86-k-no!7i1890!8i1172!4m5!3m4!1s0x0:0x9a32bdaf1cd86616!8m2!3d51.5198896!4d-0.152025#")
-event4.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+file = URI.open("https://www.culturewhisper.com/images/thumbs/cw-9283-660x375.jpg")
+event4.photos.attach(io: file, filename: "hiddencity1.jpg", content_type: "image/jpeg")
 event4.save
 
 event5 = Event.new(
@@ -208,7 +210,7 @@ event5 = Event.new(
   price_per_person: 25.00
 )
 file = URI.open("https://www.culturewhisper.com/images/uploads/cw-22849.jpg")
-event5.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event5.photos.attach(io: file, filename: "hiddencity2.jpg", content_type: "image/jpeg")
 event5.save
 
 event6 = Event.new(
@@ -220,7 +222,7 @@ event6 = Event.new(
   price_per_person: 25.00
 )
 file = URI.open("https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/12/12/1386830497013/SKen.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=4d9ee3c3772c731ce391c9130b0106e7")
-event6.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event6.photos.attach(io: file, filename: "hiddencity3.jpg", content_type: "image/jpeg")
 event6.save
 
 event7 = Event.new(
@@ -232,7 +234,7 @@ event7 = Event.new(
   price_per_person: 20.00
 )
 file = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/c7/1c/17/getlstd-property-photo.jpg?w=1200&h=-1&s=1")
-event7.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event7.photos.attach(io: file, filename: "backyardcinema.jpg", content_type: "image/jpeg")
 event7.save
 
 event8 = Event.new(
@@ -244,7 +246,7 @@ event8 = Event.new(
   price_per_person: 49.00
 )
 file = URI.open("https://jupiterhadley.com/wp-content/uploads/2021/09/IMG_8876.jpg")
-event8.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event8.photos.attach(io: file, filename: "monopoly.jpg", content_type: "image/jpeg")
 event8.save
 
 event9 = Event.new(
@@ -256,19 +258,19 @@ event9 = Event.new(
   price_per_person: 40.00
 )
 file = URI.open("https://www.thewaroftheworlds.com/site/assets/files/3646/278485500_10158738298044290_6864718081938819132_n.510x510.jpeg")
-event9.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event9.photos.attach(io: file, filename: "warofworlds.jpg", content_type: "image/jpeg")
 event9.save
 
 event10 = Event.new(
   name: "The Murder Express Part Deux",
   location: "Pedley Street Station, Arch 63, Pedley Street, London, E1",
   description: "The year is 1937, the height of the British Empire, and Britain's most famous archeologist, Dr. Errol Earhart, has unearthed the world's most valuable diamond, the Jewel of the Empire, which is being transported to the Von Cleethorpes estate via Pedley Street station's, Murdér Express. Along for the journey are a host of new characters, including the dashing Errol Earhart and the mysterious Miss Marie as well as some familiar faces. It's not long before the diamond is missing, bodies are beginning to pile up and the clock is ticking to catch a killer and recover the Jewel of the Empire. ",
-  tags: "Food & Drink / Theatre",
+  tags: "Theatre",
   url: "https://www.funicularproductions.com/",
   price_per_person: 65.00
 )
 file = URI.open("https://static.designmynight.com/uploads/2019/05/Inspector2-optimised.png")
-event10.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event10.photos.attach(io: file, filename: "murderexpress.jpg", content_type: "image/png")
 event10.save
 
 event11 = Event.new(
@@ -280,7 +282,7 @@ event11 = Event.new(
   price_per_person: 20.00
 )
 file = URI.open("https://static.designmynight.com/uploads/2022/05/New-profile1-optimised.jpg")
-event11.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event11.photos.attach(io: file, filename: "supercharge.jpg", content_type: "image/jpeg")
 event11.save
 puts "finished events"
 
@@ -347,7 +349,7 @@ Favourite.create(user: user10, event: event1)
 puts "finished favourties"
 
 puts "adding reviews"
-Review.create(user: user1, event: event1, content: "I had the pleasure of going twice and it was incredible. If you're a DC / Batman fan this restaurant is for you. The ambience is amazing, themed cocktails very instagramable and food was delicious.", rating: 5)
+Review.create(user: user2, event: event1, content: "I had the pleasure of going twice and it was incredible. If you're a DC / Batman fan this restaurant is for you. The ambience is amazing, themed cocktails very instagramable and food was delicious.", rating: 5)
 Review.create(user: user6, event: event1, content: "Fantastic dinner! Great food, delicious cocktails and excellent service. The atmosphere and ambience is amazing. Live music, and cool decor with a subtle DC/Batman theme.", rating: 4)
 
 Review.create(user: user8, event: event2, content: "I could not recommend this experience enough! Booked it with a couple of friends, not knowing what to expect but had read that it was from the same people that created the crystal maze live experience which was also spectacular, so was hopeful it would reach those heights. It did not disappoint!", rating: 4)
