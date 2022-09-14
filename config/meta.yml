@@ -1,0 +1,5 @@
+meta_product_name: "NightsTale"
+meta_title: "NightsTale - Discover your next night out"
+meta_description: "Search hundreds of events around you to discover a unique night out"
+meta_image: "sky1.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
