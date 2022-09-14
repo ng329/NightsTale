@@ -28,7 +28,7 @@
     <div class="event-info pad12 box06403">
      <h2 class="information">Information</h2>
      <a href="<%= @event.url %>" target="_blank"><p><%= @event.url %></p></a>
-     <p><%= number_to_currency(@event.price_per_person, unit: "£")  %> price per person.</p>
+     <p>Price: <%= number_to_currency(@event.price_per_person, unit: "£")  %></p>
      <p><%= @event.description %></p>
     </div>
     <div class="review-line mar-vert1" ></div>

@@ -21,7 +21,7 @@ export default class extends Controller {
                             <p>Total price: ${new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'GBP' }).format(e.currentTarget.dataset.price)}</p>
                           </a>
                           <a href="/users/${e.currentTarget.dataset.userid}">
-                            <p>Individual who booked: ${e.currentTarget.dataset.userbooked}</p>
+                            <p>Booked by: ${e.currentTarget.dataset.userbooked}</p>
                           </a>
                     </div>`
       this.modalTarget.innerHTML = bookingInfo;
