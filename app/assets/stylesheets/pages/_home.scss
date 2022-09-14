@@ -37,3 +37,9 @@
   --swiper-pagination-bullet-inactive-opacity: .5 !important;
 }
 
+// sign in sign up
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
