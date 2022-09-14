@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @favourites = @user.favourites
     @bookings = set_booking_dates
+    # raise
   end
 
   private

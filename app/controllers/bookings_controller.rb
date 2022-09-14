@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     @booking.total_price = calculate_price(@event.price_per_person, @booking.number_of_people)
     if @booking.save
       link_booking_to_friends
-      redirect_to "/profile"
+      redirect_to user_path(current_user)
     else
       render 'events/show', status: :unprocessable_entity
     end
