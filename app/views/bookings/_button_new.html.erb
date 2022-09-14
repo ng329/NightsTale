@@ -20,13 +20,15 @@
           <div class="friends-checkboxes">
             <%= f.input :friends, as: :check_boxes, collection: @friends, label: "", input_html: { multiple: true, class: "friend-selector"} %>
           </div>
-          <div class="modal-book">
-            <%= f.submit "Book Now", class: "modal-booking btn btn-secondary" %>
+
+         <div class="modal-book">
+            <%= f.submit "Book Now", class: "modal-booking btn btn-secondary new-booking-btn mar-vert2" %>
+
           </div>
         <% end %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary short" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
