@@ -1,7 +1,7 @@
 <div class="friends-page">
   <div class="titlebox">
   <h2>Friends</h2>
-    
+
   </div>
   <%# link to find new friends %>
   <div class="add-container">
@@ -15,7 +15,7 @@
   <%= render "invitations/requests" %>
 
   <%# all friends %>
-  
+
   <% @friends.each do |friend| %>
     <div class="friend-card box06403">
       <div class="friend-head">
@@ -27,11 +27,13 @@
         <% end %>
       </div>
       <%# Delete friend button %>
+
       <div class="plus">
-        <%= link_to  user_invitation_path(current_user, request), class:'', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <%= link_to  user_invitation_path(current_user, friend), class:'', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
           <i class="bin-friend fa-solid fa-trash-alt"></i>
         <% end %>
       </div>
+
 
     </div>
   <% end %>
