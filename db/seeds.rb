@@ -263,7 +263,7 @@ event9.save
 
 event10 = Event.new(
   name: "The Murder Express Part Deux",
-  location: "Arch 63 Pedley Street, Bethnal Green, London, E1 5BW",
+  location: "Pedley Street, Bethnal Green, London, E1 5BW",
   description: "The year is 1937, the height of the British Empire, and Britain's most famous archeologist, Dr. Errol Earhart, has unearthed the world's most valuable diamond, the Jewel of the Empire, which is being transported to the Von Cleethorpes estate via Pedley Street station's, Murdér Express. Along for the journey are a host of new characters, including the dashing Errol Earhart and the mysterious Miss Marie as well as some familiar faces. It's not long before the diamond is missing, bodies are beginning to pile up and the clock is ticking to catch a killer and recover the Jewel of the Empire. ",
   tags: "Theatre",
   url: "https://www.funicularproductions.com/",
