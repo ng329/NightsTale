@@ -11,12 +11,12 @@
 
     <div class="find-friend">
       <%= form_with url:  new_user_invitation_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a friend"
+          <% submit_tag "Search", class: "fa-solid fa-filter fa-xl pos-search" %>
+            <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a friend"
         %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
@@ -33,13 +33,13 @@
         <% end %>
       </div>
    
-    <div class="plus">
-        <%= link_to  user_invitations_path(friend_id: friend), data: { turbo_method: "post" } do %>
-          <i class="bin-friend fa-solid fa-plus"></i>
-        <% end %>
-     </div>
-    </div>
-  <% end %>
+        <div class="plus">
+            <%= link_to  user_invitations_path(friend_id: friend), data: { turbo_method: "post" } do %>
+              <i class="bin-friend fa-solid fa-plus"></i>
+            <% end %>
+        </div>
+      </div>
+      <% end %>
 
     </div>
 

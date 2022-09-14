@@ -34,9 +34,12 @@
 .friends-checkboxes {
   height: 11rem;
   overflow: scroll;
-  border: 0.05rem solid white;
   padding: 1rem;
   margin-bottom: 0.5rem;
+  // background: $deep-purple;
+  border: solid 1px $black;
+  width: 14rem;
+  background: $grey;
 }
 
 .friend-selector {
