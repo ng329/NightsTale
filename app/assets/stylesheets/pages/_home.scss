@@ -3,7 +3,7 @@
 .swiper-slide img {
   width: 100%;
   z-index: 0;
-  opacity: .7;
+  // opacity: .7;
   // top: 0px;
   object-fit: cover;
   border: 0px;
@@ -24,7 +24,7 @@
   bottom: 50px;
   position: absolute;
   z-index: 5;
-  margin-left: 10px;
+  // margin-left: 10px;
 }
 
 .swiper-pagination-bullet {
@@ -42,4 +42,11 @@
 .modal-body {
   display: flex;
   flex-direction: column;
+}
+
+.nt-home {
+  font-size: 3rem !important;
+  position: absolute;
+  top: 4rem !important;
+  margin: auto 1.5rem !important;
 }
