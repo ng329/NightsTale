@@ -27,6 +27,7 @@
   left: 20%;
   bottom: 50%;
   transform: translate(-50%,50%);
+  margin: 0 auto;
 }
 
 .map-icon {
@@ -34,7 +35,7 @@
   left: 50%;
   bottom: 50%;
   transform: translate(-50%,50%);
-
+  margin: 0 auto;
 }
 
 .profile-icon {
@@ -42,7 +43,7 @@
   left: 80%;
   bottom: 50%;
   transform: translate(-50%,50%);
-
+  margin: 0 auto;
 }
 
 // .icon:hover{
@@ -71,7 +72,7 @@
 
 .active-page {
   background-color: $violet;
-  // border-radius: 15px;
+  border-radius: 15px;
   transform: translate(-50%,50%);
   bottom: 105%;
   position: absolute;
@@ -103,7 +104,7 @@
   font-size: 2rem;
 }
 
-.fa-solid {
-  display: flex;
-  justify-content: center;
-}
+// .fa-solid {
+//   display: flex;
+//   justify-content: center;
+// }
