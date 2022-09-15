@@ -10,18 +10,19 @@
         <%= image_tag "sky2.png" %>
       </div>
       <div class="swiper-slide">
-        <h1>NightsTale</h1>
+        <h1 class="nt-home">NightsTale</h1>
+        <div class="logo-home"><%= image_tag "logont.png" %></div>
         <%= image_tag "sky3.png" %>
       </div>
     </div>
     <div class="swiper-pagination"></div>
-    </div>
-      <div class="home-btns">
-      <% if user_signed_in? %>
-        <a class="btn box06403 long size2 mar24" href="/events">Enter</a>
-      <% else %>
-        <a class="btn box06403 short size2" href="/users/sign_in">Sign In</a>
-        <a class="btn box06403 short size2" href="/users/sign_up">Sign Up</a>
-      <% end %>
-      </div>
+  </div>
+  <div class="home-btns">
+    <% if user_signed_in? %>
+      <a class="btn box06403 long size2 mar24" href="/events">Enter</a>
+    <% else %>
+      <a class="btn box06403 short size2" href="/users/sign_in">Sign In</a>
+      <a class="btn box06403 short size2" href="/users/sign_up">Sign Up</a>
+    <% end %>
+  </div>
 </div>
