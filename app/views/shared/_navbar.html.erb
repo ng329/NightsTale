@@ -2,32 +2,32 @@
   <div id="nav-bar" data-controller="navbar">
     <% if current_page?("/popular") %>
       <div class="popular-icon active-page" type="button">
-        <a href="/popular"><i class="fa-solid fa-fire-flame-curved"></i></a>
+        <a href="/popular" data-turbo="false"><i class="fa-solid fa-fire-flame-curved"></i></a>
       </div>
       <% else %>
           <div class="popular-icon" type="button">
-            <a href="/popular"><i class="fa-solid fa-fire-flame-curved"></i></a>
+            <a href="/popular" data-turbo="false"><i class="fa-solid fa-fire-flame-curved"></i></a>
       </div>
     <% end %>
     <% if current_page?("/events") %>
       <div class="map-icon active-page" type="button">
-        <a href="/events"><i class="fa-solid fa-location-dot" ></i></a>
+        <a href="/events" data-turbo="false"><i class="fa-solid fa-location-dot" ></i></a>
       </div>
       <% else %>
         <div class="map-icon" type="button">
-          <a href="/events"><i class="fa-solid fa-location-dot" ></i></a>
+          <a href="/events" data-turbo="false"><i class="fa-solid fa-location-dot" ></i></a>
         </div>
     <% end %>
     <% if current_page?(user_path(current_user)) %>
         <div class="profile-icon active-page" type="button">
           <%= link_to user_path(current_user) do %>
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" data-turbo="false"></i>
             <% end %>
         </div>
     <% else %>
         <div class="profile-icon" type="button">
           <%= link_to user_path(current_user) do %>
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" data-turbo="false"></i>
             <% end %>
         </div>
           <% end %>
