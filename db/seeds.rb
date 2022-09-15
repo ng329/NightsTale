@@ -309,7 +309,7 @@ file = URI.open("https://images.squarespace-cdn.com/content/v1/5b33be503917eef6c
 event13.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
 event13.save
 
-event114 = Event.new(
+event14 = Event.new(
   name: "The Gunpowder Plot",
   location: "8-12 Tower Hill Vaults, Tower Hill, London, EC3N 4EE",
   description: "London, 1605. A city divided. The fuse of rebellion is lit. The peace of the nation balances on a knife edge... Step into a world where spies and informants hide in every shadow. Your mission is to go undercover and unmask the mysterious figures behind history’s most infamous plot. But when you’re surrounded by ‘traitors’ who can you trust?",
@@ -394,14 +394,14 @@ event20.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg
 event20.save
 
 event21 = Event.new(
-  name: "Sensas",
-  location: "17 Miles St, London SW8 1RZ",
-  description: "Take on a variety of exciting challenges with a one-of-a-kind experience at SENSAS London. Within two hours, you will put your five senses to the test as you navigate the Sensory Labs, some of which will leave you in complete darkness. A Master of Senses will be there to guide you from a distance, allowing you to fully immerse in this thrilling multi-sensory experience.",
-  tags: "Adventure",
-  url: "https://london.sensas.top/",
-  price_per_person: 34.00
+  name: "Rooftop Film Club",
+  location: "133 Rye Ln, London SE15 4ST",
+  description: "aking cinema up a level. We are on the rooftop of the Bussey Building, just two minutes walk from Peckham Rye station. We are back this summer for another film-filled season of classic, cult and recent releases on the finest rooftops. Film lovers are able to eat fabulous food, enjoy cold drinks and watch their favourite movies on the big screen as the stars begin to sparkle, this really is an incomparable film experience in the fresh air of a warm summer's night.",
+  tags: "Cinema",
+  url: "https://rooftopfilmclub.com/london/",
+  price_per_person: 17.00
 )
-file = URI.open("https://res.dayoutwiththekids.co.uk/image/upload/w_400,h_200,q_85,c_fill,g_auto/w_800,h_450,q_75,c_fill/v1637747907/attractions/s/sensas-london-fa2tu3he/sensas_3_oleab7.jpg")
+file = URI.open("https://rooftopfilmclub.com/wp-content/uploads/2020/03/Bussey-3-1080x650-1.jpg")
 event21.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
 event21.save
 
