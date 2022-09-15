@@ -284,6 +284,247 @@ event11 = Event.new(
 file = URI.open("https://static.designmynight.com/uploads/2022/05/New-profile1-optimised.jpg")
 event11.photos.attach(io: file, filename: "supercharge.jpg", content_type: "image/jpeg")
 event11.save
+
+event12 = Event.new(
+  name: "Alcotraz: Cell Block Two-One-Two",
+  location: "212, Brick Lane, London, E1 6SA",
+  description: "nspired by Hollywood Movies and TV that have brought to life America's most infamous prison, Alcotraz is London's first immersive theatrical cocktail bar. From the orange jumpsuits upon entrance, to the real metallic cells, Alcotraz becomes the perfect backdrop to enjoy a drink within an epic yet intimate environment. When convicted to Alcotraz, inmates are taken into an exciting world of mischief as they are instructed by notorious bootleggers on the inside to smuggle-in liquor to be used to make delicious, bespoke cocktails. ",
+  tags: "Food & Drink",
+  url: "https://www.alcotraz.co.uk/locations/london/",
+  price_per_person: 35.00
+)
+file = URI.open("https://media.timeout.com/images/105869525/750/422/image.jpg")
+event12.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event12.save
+
+event13 = Event.new(
+  name: "The Grid",
+  location: "2 Robinson Road, Southwark, SE1 8BU",
+  description: "oin our secret undercover operation to learn and operate Artificial Intelligence tools, drink futuristic sci-fi potions (yes, cocktails!) and eventually defeat the system for the betterment of humanity's future. ",
+  tags: "Escape Room",
+  url: "https://www.thegrid.london/",
+  price_per_person: 32.00
+)
+file = URI.open("https://images.squarespace-cdn.com/content/v1/5b33be503917eef6cfc13ae5/1555831954859-FSUOV7C5EFAQZD5QXQZL/image-asset.jpeg")
+event13.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event13.save
+
+event114 = Event.new(
+  name: "The Gunpowder Plot",
+  location: "8-12 Tower Hill Vaults, Tower Hill, London, EC3N 4EE",
+  description: "London, 1605. A city divided. The fuse of rebellion is lit. The peace of the nation balances on a knife edge... Step into a world where spies and informants hide in every shadow. Your mission is to go undercover and unmask the mysterious figures behind history’s most infamous plot. But when you’re surrounded by ‘traitors’ who can you trust?",
+  tags: "Theatre",
+  url: "https://gunpowderimmersive.com/",
+  price_per_person: 45.00
+)
+file = URI.open("https://media.timeout.com/images/105900432/image.jpg")
+event14.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event14.save
+
+event15 = Event.new(
+  name: "The Candlelit Club",
+  location: "16 Kemsing Rd, London SE10 0LL",
+  description: "The Candlelight Club is a clandestine pop-up party with a 1920s speakeasy flavour, in a secret London venue lit by candles. You'll be whisked away to the Gatsby era with a heady mix of live jazz music, vintage vinylism, delicious cocktails and a party crowd all dressed up in their finest 1920's outfits, inhibitions loosened away from the prying eyes of Prohibition agents.",
+  tags: "Food & Drink",
+  url: "https://www.thecandlelightclub.com/",
+  price_per_person: 25.00
+)
+file = URI.open("https://static.designmynight.com/uploads/2016/07/IMG_5423enb-1MED-1200x724-optimised.jpg")
+event15.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event15.save
+
+event16 = Event.new(
+  name: "Moonshine Saloon",
+  location: "Houndsditch, London, EC3A 7DB",
+  description: "A visit to Moonshine Saloon will see you become a part of the story as you bring your own liquor and become the beating heart of a covert liquor operation led by the self-styled King of the Moonshiners, and Wanted Man, Clyde Cassidy. With the Law previously coming close to catching Cassidy, the Saloon makes the perfect meet-point for new outlaws to join the gang and learn the art of smuggling and supplying illicit liquor during the Great American Frontier. Within the Saloon, outlaws can rub shoulders with the local's, try their luck at card or dice games or perhaps be trusted enough to receive a close-up inspection of Cassidy's notorious Moonshine Distillery. ",
+  tags: "Food & Drink",
+  url: "https://www.moonshinesaloon.com/",
+  price_per_person: 37.00
+)
+file = URI.open("https://www.moonshinesaloon.com/wp-content/uploads/2021/01/Private-Hire.jpg")
+event16.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event16.save
+
+event17 = Event.new(
+  name: "Faulty Towers The Dining Experience",
+  location: "60 Guilford Street, London, WC1N 1DB",
+  description: "Chaos reigns as soon as you walk through the door in this fully immersive show where you become diners, served by Basil, Sybil and Manuel. Join them for lashings of laughter, huge spoonfuls of spontaneity, plenty of participation, and a 3-course meal. A true blend of ingenious comedy, a unique theatrical script and heaps of improvisation, this multi-sensory experience is perfect for comedy fans, theatre fanatics and anyone who fancies a dinner they will never forget.",
+  tags: "Food & Drink",
+  url: "https://www.interactivetheatre.com.au/faulty-towers-the-dining-experience/",
+  price_per_person: 65.00
+)
+file = URI.open("https://www.londonboxoffice.co.uk/images/shows/production/original/24429-1645118695-ft2wl.png")
+event17.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event17.save
+
+event18 = Event.new(
+  name: "Plonk",
+  location: "407 Mentmore Terrace, London E8 3PP",
+  description: "Our outdoor crazy golf course and games bar is on the edge of London Fields Hackney, just across the park from Broadway Market. This 9 hole mini golf course has some of our favourite golfstacles, brought together in our cosy private garden.",
+  tags: "Adventure",
+  url: "https://www.plonkgolf.co.uk/",
+  price_per_person: 12.50
+)
+file = URI.open("https://www.plonkgolf.co.uk/wp-content/uploads/2022/05/294A5607_Web_2.jpg")
+event18.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event18.save
+
+event19 = Event.new(
+  name: "Hyper Reality",
+  location: "67 Mile End Rd, Bethnal Green, London E1 4TT",
+  description: "Cyberpunk immersive entertainment venue and bar in the heart of East London. The venue spans across The Arena, The Place with No Name, The Rollercoaster, The Go-Kart which offers next level VR experiences with exclusive titles for 1 to 4 players. A Tokyo inspired The Lounge space hosts our retro-gaming and board games. Finally, The Club hosts a secret 270 degree mural equipped with a projector for private screening, gaming or karaoke.",
+  tags: "Gaming",
+  url: "https://hyper-reality.io/",
+  price_per_person: 15.00
+)
+file = URI.open("https://static.designmynight.com/uploads/2020/02/Hyper-Reality51-optimised.jpg")
+event19.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event19.save
+
+event20 = Event.new(
+  name: "Locked in a Room",
+  location: "ExCeL London, Royal Victoria Docks, E16 1XL",
+  description: "Very few activities immerse you in a world where you think of nothing except the task at hand. Locked In A Room does. It’s unique, it’s fantastic fun, it’s challenging, it’s pure escapism. You may be surprised on how well you automatically pull together in a unified team in unlocking the key to escape!",
+  tags: "Escape Room",
+  url: "https://lockedinaroom.co.uk/london",
+  price_per_person: 25.00
+)
+file = URI.open("https://cdn.thelondoneconomic.com/wp-content/uploads/2016/03/Lockd3.jpg")
+event20.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event20.save
+
+event21 = Event.new(
+  name: "Sensas",
+  location: "17 Miles St, London SW8 1RZ",
+  description: "Take on a variety of exciting challenges with a one-of-a-kind experience at SENSAS London. Within two hours, you will put your five senses to the test as you navigate the Sensory Labs, some of which will leave you in complete darkness. A Master of Senses will be there to guide you from a distance, allowing you to fully immerse in this thrilling multi-sensory experience.",
+  tags: "Adventure",
+  url: "https://london.sensas.top/",
+  price_per_person: 34.00
+)
+file = URI.open("https://res.dayoutwiththekids.co.uk/image/upload/w_400,h_200,q_85,c_fill,g_auto/w_800,h_450,q_75,c_fill/v1637747907/attractions/s/sensas-london-fa2tu3he/sensas_3_oleab7.jpg")
+event21.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event21.save
+
+event22 = Event.new(
+  name: "The Great Gatsby",
+  location: "56 Davies St, London W1K 5HR",
+  description: "Step into the Roaring Twenties as F. Scott Fitzgerald’s The Great Gatsby is brought to life in this immersive theatre show. Put on your best 1920s-inspired outfit and join the fun as you're led through Jay Gatsby’s store into one of his infamous parties in this interactive performance.",
+  tags: "Theatre",
+  url: "https://immersivegatsby.com/event/the-great-gatsby",
+  price_per_person: 43.00
+)
+file = URI.open("https://www.telegraph.co.uk/content/dam/theatre/2020/10/22/TELEMMGLPICT000240733195_trans_NvBQzQNjv4BqOHNs0Y5vwBZmXiYbjSVrpEYcUoJO3J81ok5AhMQWcTU.jpeg")
+event22.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event22.save
+
+event23 = Event.new(
+  name: "The Burnt City",
+  location: "1 Cartridge Place, Woolwich, London",
+  description: "As Greece teeters on the brink of victory, the neon backstreets of Downtown Troy give way to a sprawling labyrinth hiding secrets even the prophecies could not foretell. In this colossal playground, the furies watch on as mortals play out their fate. And as night falls, the city comes alive. One last time.",
+  tags: "Theatre",
+  url: "https://onecartridgeplace.com/theburntcity/",
+  price_per_person: 75.00
+)
+file = URI.open("https://www.punchdrunk.com/content/uploads/2021/09/TheCityComesAlive-Img.jpg")
+event23.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event23.save
+
+event24 = Event.new(
+  name: "Jurassic World: The Exhibition",
+  location: "Excel Centre, London, E16 1XL",
+  description: "Board the ferry to Isla Nublar and walk across the massive Jurassic World gates. Walk under a majestic Brachiosaurus, come face-to-face with ferocious raptors, and get a rare up-close look at the most vicious dinosaur of them all, the Tyrannosaurus rex.",
+  tags: "Adventure",
+  url: "https://jurassicworldexhibition.com/uk/",
+  price_per_person: 15.00
+)
+file = URI.open("https://i.ytimg.com/vi/AfPiH0SEoGg/maxresdefault.jpg")
+event24.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event24.save
+
+event25 = Event.new(
+  name: "Mamma Mia The Party",
+  location: "02 Peninsula Square, London SE10 0DX",
+  description: "Step onto Skopelos and discover a blossoming new story, with an English book by comedian Sandi Toksvig. Meet Nikos, Kate, Adam, and Konstantina as they navigate family life in the taverna, all as the sun sets over the Mediterranean. Find yourself lost in a fabulous world as a warm, romantic and funny story is performed all around you. Explore the glorious decor, which served as the backdrop to the iconic movies, and now dazzles guests.",
+  tags: "Food & Drink",
+  url: "https://mammamiatheparty.co.uk/",
+  price_per_person: 90.00
+)
+file = URI.open("https://mammamiatheparty.co.uk/wp-content/uploads/2022/04/GrantWalker-199-scaled.jpg")
+event25.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event25.save
+
+event26 = Event.new(
+  name: "Stranger Things The Experience",
+  location: "Brent Cross, London NW2 1LW",
+  description: "our chance has arrived. Stranger Things: The Experience throws you headfirst into your favorite show —join Eleven, Dustin, Mike, Lucas, Max, and Will for a very special episode starring… you! Venture inside Hawkins Lab for a 1-hour immersive experience featuring a brand-new Stranger Things storyline, then explore an 80’s-themed Mix-Tape medley with food & drinks, special merchandise, photo ops, and much more.",
+  tags: "Cinema",
+  url: "https://strangerthings-experience.com/london/",
+  price_per_person: 45.00
+)
+file = URI.open("https://helios-i.mashable.com/imagery/articles/03Q4T1UfK4nPDwyLeeY9WeQ/hero-image.fill.size_1200x1200.v1661364532.jpg")
+event26.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event26.save
+
+event27 = Event.new(
+  name: "Peaky Blinders: The Rise",
+  location: "North Yard, London NW1 8AH",
+  description: "921, London. Crime boss Tommy Shelby personally invites you to his family’s Camden warehouse to share an expansion plan that could prove lucrative for everyone. In other words, a night of celebration is in order! Whether you kick back in the pub, advise on business affairs in the office or conspire with the Italians in the cabaret lounge, how the family meeting goes is up to you. Just keep your eyes open and your ear to the ground, because Tommy’s enemies are closer than you think...",
+  tags: "Theatre",
+  url: "https://www.immersivepeakyblinders.com/",
+  price_per_person: 60.00
+)
+file = URI.open("https://thenudge.com/wp-content/uploads/2021/12/8.-PEAKY-BLINDERS-THE-RISE.-Isaac-Beechey-John-Shelby.-Photo-Mark-Senior-scaled.jpg")
+event27.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event27.save
+
+event28 = Event.new(
+  name: "City of Spies",
+  location: "St James’s Park Underground Station ",
+  description: "Immerse yourself in the cloak & dagger world of the second oldest profession in the world – Espionage! Learn of the dirty tricks, false flags and Black Ops then sip a Vodka Martini with your spy expert in a secret Whitehall bar before enjoying dinner. You are going on a journey into the devious world of subterfuge and infiltration in the birthplace of professional espionage!",
+  tags: "Outdoor",
+  url: "https://imaginexperiences.com/city-of-spies-experience/",
+  price_per_person: 85.00
+)
+file = URI.open("https://vedcdn.imgix.net/images/product/main/immersive-spy-mission-28095737.jpg")
+event28.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event28.save
+
+event29 = Event.new(
+  name: "Swingers",
+  location: "8 Brown's Buildings, London EC3A 8AL",
+  description: "At Swingers you’ll enjoy crazy golf, stunning cocktails, London’s best street-food vendors, beautiful bars and DJs. There’s no dress code, ban on mobiles or penalties for going out of turn. Unless you’re at the bar.",
+  tags: "Gaming",
+  url: "https://swingers.club/uk/crazy-golf",
+  price_per_person: 11.00
+)
+file = URI.open("https://swingerscmsstoragelive.blob.core.windows.net/public-content/Dynamic%20Images/Original/Windmill%20Course.jpg")
+event29.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event29.save
+
+event30 = Event.new(
+  name: "Four Quarters Arcade Bar",
+  location: "Unit 8, Canalside, London E20 3BS",
+  description: "Four Quarters East opened in Feb 2017 as an arcade bar in East London. It boasts not only a fine selection of video games, but a canal-side location with a sun-drenched beer garden in Hackney Wick. Perfect for summer afternoons. Alongside 20 beautifully restored original arcade cabinets, Four Quarters East also has three incredibly popular, bookable console booths with the likes of Super Nintendo, Sega Dreamcast and Nintendo 64 to battle your mates on! From Space Invaders and vintage Pacman to classic Nintendo & Sony consoles, it’s all about nostalgia.",
+  tags: "Gaming",
+  url: "https://fourquarters.bar/location/arcade-bar-east-london/",
+  price_per_person: 10.00
+)
+file = URI.open("https://media.timeout.com/images/105080365/image.jpg")
+event30.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+event30.save
+
+# event = Event.new(
+#   name: "",
+#   location: "",
+#   description: "",
+#   tags: "",
+#   url: "",
+#   price_per_person: 0
+# )
+# file = URI.open("")
+# event.photos.attach(io: file, filename: "event.jpg", content_type: "image/jpeg")
+# event.save
+
 puts "finished events"
 
 puts "adding favourites"
@@ -292,60 +533,90 @@ Favourite.create(user: user1, event: event2)
 Favourite.create(user: user1, event: event3)
 Favourite.create(user: user1, event: event4)
 Favourite.create(user: user1, event: event11)
+Favourite.create(user: user1, event: event13)
+Favourite.create(user: user1, event: event14)
+Favourite.create(user: user1, event: event19)
 
 Favourite.create(user: user2, event: event2)
 Favourite.create(user: user2, event: event4)
 Favourite.create(user: user2, event: event3)
 Favourite.create(user: user2, event: event9)
 Favourite.create(user: user2, event: event10)
+Favourite.create(user: user2, event: event23)
+Favourite.create(user: user2, event: event15)
+Favourite.create(user: user2, event: event18)
 
 Favourite.create(user: user3, event: event2)
 Favourite.create(user: user3, event: event7)
 Favourite.create(user: user3, event: event8)
 Favourite.create(user: user3, event: event11)
 Favourite.create(user: user3, event: event9)
+Favourite.create(user: user3, event: event12)
+Favourite.create(user: user3, event: event21)
+Favourite.create(user: user3, event: event30)
 
 Favourite.create(user: user4, event: event2)
 Favourite.create(user: user4, event: event1)
 Favourite.create(user: user4, event: event4)
 Favourite.create(user: user4, event: event5)
 Favourite.create(user: user4, event: event10)
+Favourite.create(user: user4, event: event13)
+Favourite.create(user: user4, event: event26)
+Favourite.create(user: user4, event: event30)
 
 Favourite.create(user: user5, event: event2)
 Favourite.create(user: user5, event: event5)
 Favourite.create(user: user5, event: event11)
 Favourite.create(user: user5, event: event8)
 Favourite.create(user: user5, event: event9)
+Favourite.create(user: user5, event: event21)
+Favourite.create(user: user5, event: event15)
+Favourite.create(user: user5, event: event22)
 
 Favourite.create(user: user6, event: event10)
 Favourite.create(user: user6, event: event2)
 Favourite.create(user: user6, event: event6)
 Favourite.create(user: user6, event: event8)
 Favourite.create(user: user6, event: event9)
+Favourite.create(user: user7, event: event26)
+Favourite.create(user: user7, event: event18)
+Favourite.create(user: user7, event: event30)
 
 Favourite.create(user: user7, event: event2)
 Favourite.create(user: user7, event: event10)
 Favourite.create(user: user7, event: event3)
 Favourite.create(user: user7, event: event4)
 Favourite.create(user: user7, event: event7)
+Favourite.create(user: user7, event: event23)
+Favourite.create(user: user7, event: event22)
+Favourite.create(user: user7, event: event27)
 
 Favourite.create(user: user8, event: event1)
 Favourite.create(user: user8, event: event6)
 Favourite.create(user: user8, event: event7)
 Favourite.create(user: user8, event: event8)
 Favourite.create(user: user8, event: event9)
+Favourite.create(user: user8, event: event20)
+Favourite.create(user: user8, event: event16)
+Favourite.create(user: user8, event: event29)
 
 Favourite.create(user: user9, event: event1)
 Favourite.create(user: user9, event: event2)
 Favourite.create(user: user9, event: event3)
 Favourite.create(user: user9, event: event4)
 Favourite.create(user: user9, event: event6)
+Favourite.create(user: user9, event: event21)
+Favourite.create(user: user9, event: event22)
+Favourite.create(user: user9, event: event26)
 
 Favourite.create(user: user10, event: event7)
 Favourite.create(user: user10, event: event8)
 Favourite.create(user: user10, event: event9)
 Favourite.create(user: user10, event: event11)
 Favourite.create(user: user10, event: event1)
+Favourite.create(user: user10, event: event20)
+Favourite.create(user: user10, event: event25)
+Favourite.create(user: user10, event: event23)
 puts "finished favourties"
 
 puts "adding reviews"
