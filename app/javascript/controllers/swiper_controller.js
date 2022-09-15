@@ -9,7 +9,7 @@ import Swiper, { Navigation, Pagination } from "swiper";
 export default class extends Controller {
   connect() {
     Swiper.use([Navigation, Pagination]);
-    
+
     const swiper = new Swiper('.swiper', {
       speed: 400,
       spaceBetween: 0,
@@ -23,7 +23,7 @@ export default class extends Controller {
         prevEl: '.swiper-button-prev',
       },
     }
-    
+
     );
     console.log(swiper)
   }
