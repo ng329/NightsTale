@@ -1,0 +1,12 @@
+.logo-home img {
+  height: 15rem !important;
+  width: 15rem !important;
+  z-index: 100 !important;
+  position: absolute;
+  margin: 4.8rem !important;
+  opacity: 1 !important;
+  background: rgba(250, 250, 250, .9) !important;
+  top: 25%;
+  border: solid $deep-purple 2px;
+  box-shadow: -16px 16px 0px $deep-purple, 16px -16px 0px #b1aebb;
+}
